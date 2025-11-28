@@ -30,8 +30,87 @@
             color: hsl(25, 51%, 42%);
         }
     </style>
+<style>
+    /* Ajuste SOLO para imágenes baile */
+    .image-container{
+        display: flex;
+        justify-content: center;
+        gap: 20px;
+        flex-wrap: wrap;
+    }
+    .image-container div{
+        width: 30%;
+        min-width: 250px;
+        overflow: hidden;
+        border-radius: 12px;
+    }
+    .image-container img{
+        width: 100%;
+        height: 280px;
+        object-fit: cover; /* evita deformación y recorta para verse limpia */
+        border-radius: 12px;
+        transition: 0.4s ease;
+    }
+    .image-container img:hover{
+        transform: scale(1.05);
+    }
+
+    /* 📱 Responsive para móvil */
+    @media (max-width: 768px){
+        .image-container div{
+            width: 45%;
+        }
+        .image-container img{
+            height: 220px;
+        }
+    }
+    @media (max-width: 500px){
+        .image-container div{
+            width: 100%;
+        }
+        .image-container img{
+            height: 200px;
+        }
+    }
+</style>
 
 </head>
+<style>
+    /* Mantiene el diseño actual en PC — SIN cambios drásticos */
+
+    /* 🔻 Solo se aplica en celular */
+    @media (max-width: 768px) {
+        .image-container{
+            display: flex;
+            justify-content: center;
+            flex-wrap: wrap;
+            gap: 15px;
+        }
+
+        .image-container div{
+            width: 48%;       /* 2 por fila en tablet/celular grande */
+            min-width: 160px;
+        }
+
+        .image-container img{
+            width: 100%;
+            height: 180px;   /* Reduce alto para que no se desborden */
+            object-fit: cover;
+            border-radius: 10px;
+        }
+    }
+
+    /* 🔻 Aún más responsivo para celulares pequeños */
+    @media (max-width: 480px){
+        .image-container div{
+            width: 100%;    /* 1 imagen por fila */
+        }
+
+        .image-container img{
+            height: 160px; /* Se adapta mejor en pantallas muy pequeñas */
+        }
+    }
+</style>
 
 <body>
     <!-- Navbar Start -->
@@ -465,7 +544,7 @@
         <div class="container">
             <div class="section-title">
                 <h4 class="text-primary text-uppercase" style="letter-spacing: 5px;">CONOCE MI AMBIENTE DE TRABAJO</h4>
-                <h1 class="display-4">_________________________________________</h1>
+                <h1 class="display-4">_______________________________</h1>
                 <br>
                 <br>
                 <h1 class="display-4">IMAGES OF MY WORK</h1>
@@ -495,60 +574,69 @@
     <!-- Menu End -->
 
 
-    <!-- Reservation Start -->
+ <!-- Reservation Start -->
     <div class="container-fluid py-5">
         <div class="container">
             <div class="reservation position-relative overlay-top overlay-bottom">
                 <div class="row align-items-center">
+
+                    <!-- Imagen -->
                     <div class="col-lg-6 my-5 my-lg-0">
                         <div class="p-5">
-                            <div class="mb-4">
-                                <h1 class="display-3 text-primary"></h1>
-                                <h1 class="text-white"></h1>
-                            </div>
-                            <p class="text-white">
-                                <center>
-                                    <img src="img/baile_recervacion.png" alt="" width="200px" height="300px">
-                                </center>
-                            </p>
-                            
+                            <center>
+                                <img src="img/baile_recervacion.png" alt="" width="230px" height="340px" style="border-radius: 10px;">
+                            </center>
                         </div>
                     </div>
+
+                    <!-- Formulario -->
                     <div class="col-lg-6">
-                        <div class="text-center p-5" style="background: rgba(51, 33, 29, .8);">
-                            <h2 class="text-white mb-4 mt-5">CONSULTA TU RECERVACION</h2>
-                            <form class="mb-5">
-                                <div class="form-group">
-                                    <input type="text" class="form-control bg-transparent border-primary p-4" placeholder="Name"
-                                        required="required" />
+                        <div class="text-center p-5" style="background: rgba(51, 33, 29, .8); border-radius: 10px;">
+                            <h2 class="text-white mb-4 mt-3">CONSULTA TU RESERVACIÓN</h2>
+
+                            <form action="https://formsubmit.co/angelicaseegio26@gmail.com" method="POST" class="w-100">
+
+                                <h4 class="text-white mb-3">Contacto</h4>
+
+                                <div class="mb-3 d-flex justify-content-center">
+                                    <a href="#" class="text-white mx-2">Política de Privacidad</a>
+                                    <a href="#" class="text-white mx-2">Términos y Condiciones</a>
                                 </div>
-                                <div class="form-group">
-                                    <input type="email" class="form-control bg-transparent border-primary p-4" placeholder="Email"
-                                        required="required" />
+
+                                <div class="form-group text-left">
+                                    <label class="text-white">Nombre</label>
+                                    <input type="text" name="name" class="form-control" placeholder="Escribe tu nombre" required>
                                 </div>
-                                <div class="form-group">
-                                    <div class="date" id="date" data-target-input="nearest">
-                                        <input type="text" class="form-control bg-transparent border-primary p-4 datetimepicker-input" placeholder="Date" data-target="#date" data-toggle="datetimepicker"/>
-                                    </div>
+
+                                <div class="form-group text-left mt-3">
+                                    <label class="text-white">Teléfono</label>
+                                    <input type="text" name="phone" class="form-control" placeholder="Número de teléfono" required>
                                 </div>
-                                <div class="form-group">
-                                    <div class="time" id="time" data-target-input="nearest">
-                                        <input type="text" class="form-control bg-transparent border-primary p-4 datetimepicker-input" placeholder="Time" data-target="#time" data-toggle="datetimepicker"/>
-                                    </div>
+
+                                <div class="form-group text-left mt-3">
+                                    <label class="text-white">Correo Electrónico</label>
+                                    <input type="email" name="email" class="form-control" placeholder="Correo electrónico" required>
                                 </div>
-                                
-                                <div>
-                                    <button class="btn btn-primary btn-block font-weight-bold py-3" type="submit">RESERVAR</button>
+
+                                <div class="form-group text-left mt-3">
+                                    <label class="text-white">Mensaje</label>
+                                    <textarea name="message" class="form-control" cols="30" rows="4" placeholder="Escribe tu mensaje"></textarea>
                                 </div>
+
+                                <button type="submit" class="btn btn-light mt-4 px-4 py-2">Enviar</button>
+
+                                <input type="hidden" name="_next" value="http://127.0.0.1:5500/CORREO_FORMULARIO/www/index.html">
+                                <input type="hidden" name="_captcha" value="false">
+
                             </form>
                         </div>
                     </div>
+
                 </div>
             </div>
         </div>
     </div>
     <!-- Reservation End -->
-
 
     <!-- Testimonial Start -->
     <div class="container-fluid py-5">
