@@ -6,27 +6,18 @@
     <title>Reservation - Miriams´S Coreography</title>
     <link rel="icon" href="img/IconoVentana.ico" type="image/x-icon">
     <meta content="width=device-width, initial-scale=1.0" name="viewport">
-    <meta content="Free Website Template" name="keywords">
-    <meta content="Free Website Template" name="description">
 
-    <!-- Favicon -->
-    <link href="img/favicon.ico" rel="icon">
-
-    <!-- Google Font -->
     <link rel="preconnect" href="https://fonts.gstatic.com">
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@200;400&family=Roboto:wght@400;500;700&display=swap" rel="stylesheet"> 
-
-    <!-- Font Awesome -->
     <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.10.0/css/all.min.css" rel="stylesheet">
-
-    <!-- Libraries Stylesheet -->
     <link href="lib/owlcarousel/assets/owl.carousel.min.css" rel="stylesheet">
     <link href="lib/tempusdominus/css/tempusdominus-bootstrap-4.min.css" rel="stylesheet" />
-
-    <!-- Customized Bootstrap Stylesheet -->
     <link rel="stylesheet" href="css/style.css">
     <link href="css/style.min.css" rel="stylesheet">
-    <link rel="manifest" href="manifest.json">
+
+    <!-- SweetAlert2 -->
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+
 </head>
 
 <body>
@@ -35,8 +26,7 @@
     <div class="container-fluid p-0 nav-bar">
         <nav class="navbar navbar-expand-lg bg-none navbar-dark py-3">
             <a href="index.php" class="navbar-brand d-flex align-items-center px-lg-4 m-0">
-                <img src="img/Icono.png" 
-                     alt="Logo" 
+                <img src="img/Icono.png" alt="Logo" 
                      style="width:40px; height:40px; object-fit:contain; margin-right:8px;">
             </a>
 
@@ -100,8 +90,7 @@
                         <div class="text-center p-5" style="background: rgba(51, 33, 29, .8); border-radius: 10px;">
                             <h2 class="text-white mb-4 mt-3">CONSULTA TU RESERVACIÓN</h2>
 
-                            <!-- 🔹 Se elimina formsubmit y se deja id para JS -->
-                            <form id="reservationForm" class="w-100">
+                            <form id="contactForm" class="w-100">
 
                                 <h4 class="text-white mb-3">Contact</h4>
 
@@ -112,26 +101,28 @@
 
                                 <div class="form-group text-left">
                                     <label class="text-white">Name</label>
-                                    <input type="text" name="name" class="form-control" placeholder="Enter your name" required>
+                                    <input type="text" id="name" class="form-control" placeholder="Enter your name" required>
                                 </div>
 
                                 <div class="form-group text-left mt-3">
                                     <label class="text-white">Phone</label>
-                                    <input type="text" name="phone" class="form-control" placeholder="Phone number" required>
+                                    <input type="text" id="phone" class="form-control" placeholder="Phone number" required>
                                 </div>
 
                                 <div class="form-group text-left mt-3">
                                     <label class="text-white">Email</label>
-                                    <input type="email" name="email" class="form-control" placeholder="Email address" required>
+                                    <input type="email" id="email" class="form-control" placeholder="Email address" required>
                                 </div>
 
                                 <div class="form-group text-left mt-3">
                                     <label class="text-white">Message</label>
-                                    <textarea name="message" class="form-control" cols="30" rows="4" placeholder="Write your message"></textarea>
+                                    <textarea id="message" class="form-control" cols="30" rows="4" placeholder="Write your message" required></textarea>
                                 </div>
 
-                                <button type="submit" class="btn btn-light mt-4 px-4 py-2">Send</button>
+                                <button type="submit" class="btn btn-light mt-4 px-4 py-2" id="sendBtn">Send</button>
+
                             </form>
+
                         </div>
                     </div>
 
@@ -146,7 +137,6 @@
     <div class="container-fluid footer text-white mt-5 pt-5 px-0 position-relative overlay-top">
         <div class="row mx-0 pt-5 px-sm-3 px-lg-5 mt-4">
             <div class="col-lg-3 col-md-6 mb-5">
-                <h4 class="text-white text-uppercase mb-4" style="letter-spacing: 3px;"></h4>
                 <p><i class="fa fa-map-marker-alt mr-2"></i>123 Street, New York, USA</p>
                 <p><i class="fa fa-phone-alt mr-2"></i>+012 345 67890</p>
                 <p class="m-0"><i class="fa fa-envelope mr-2"></i>correomiriam@gmail.com</p>
@@ -163,62 +153,85 @@
             </div>
         
         </div>
-        <div class="container-fluid text-center text-white border-top mt-4 py-4 px-sm-3 px-md-5" style="border-color: rgba(256, 256, 256, .1) !important;">
-            <p class="mb-2 text-white">Copyright &copy; <a class="font-weight-bold" href="#">Domain</a>. All Rights Reserved.</a></p>
+        <div class="container-fluid text-center text-white border-top mt-4 py-4 px-sm-3 px-md-5">
+            <p class="mb-2 text-white">Copyright &copy; <a class="font-weight-bold" href="#">Domain</a>. All Rights Reserved.</p>
             <p class="m-0 text-white">Designed by <a class="font-weight-bold" href="https://htmlcodex.com">HTML Codex</a></p>
         </div>
     </div>
     <!-- Footer End -->
-
 
     <!-- Back to Top -->
     <a href="#" class="btn btn-lg btn-primary btn-lg-square back-to-top">
         <i class="fa fa-angle-double-up"></i>
     </a>
 
-    <!-- JavaScript Libraries -->
+    <!-- JavaScript -->
     <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.bundle.min.js"></script>
     <script src="lib/easing/easing.min.js"></script>
     <script src="lib/waypoints/waypoints.min.js"></script>
     <script src="lib/owlcarousel/owl.carousel.min.js"></script>
-    <script src="lib/tempusdominus/js/moment.min.js"></script>
-    <script src="lib/tempusdominus/js/moment-timezone.min.js"></script>
-    <script src="lib/tempusdominus/js/tempusdominus-bootstrap-4.min.js"></script>
 
-    <!-- Template Javascript -->
-    <script src="js/main.js"></script>
-
-    <!-- 🔹 JS para enviar JSON a submit.php -->
+    <!-- 🔥 SCRIPT PARA ENVIAR A TU API CON SWEETALERT -->
     <script>
-    document.getElementById("reservationForm").addEventListener("submit", async function(e) {
-        e.preventDefault();
+        document.getElementById("contactForm").addEventListener("submit", async function(e) {
+            e.preventDefault();
 
-        const formData = {
-            name: this.name.value,
-            phone: this.phone.value,
-            email: this.email.value,
-            message: this.message.value
-        };
+            const btn = document.getElementById("sendBtn");
 
-        const res = await fetch("submit.php", {
-            method: "POST",
-            headers: { "Content-Type": "application/json" },
-            body: JSON.stringify(formData)
+            const data = {
+                name: document.getElementById("name").value.trim(),
+                phone: document.getElementById("phone").value.trim(),
+                email: document.getElementById("email").value.trim(),
+                message: document.getElementById("message").value.trim()
+            };
+
+            // Validaciones
+            if (data.name.length < 3) 
+                return Swal.fire("Error", "Name must have at least 3 characters.", "error");
+
+            if (!/^\d{10}$/.test(data.phone))
+                return Swal.fire("Error", "Phone must be 10 digits.", "error");
+
+            if (!data.email.includes("@"))
+                return Swal.fire("Error", "Invalid email address.", "error");
+
+            if (data.message.length < 3)
+                return Swal.fire("Error", "Message is too short.", "error");
+
+            // Loader:
+            btn.disabled = true;
+            btn.innerHTML = "Sending...";
+
+            try {
+                const response = await fetch("https://goldfish-app-zpia5.ondigitalocean.app/libros", {
+                    method: "POST",
+                    headers: { "Content-Type": "application/json" },
+                    body: JSON.stringify(data)
+                });
+
+                if (response.ok) {
+                    Swal.fire({
+                        icon: "success",
+                        title: "Message Sent!",
+                        text: "We received your reservation request.",
+                        confirmButtonColor: "#28a745"
+                    });
+
+                    document.getElementById("contactForm").reset();
+
+                } else {
+                    Swal.fire("Error", "The server rejected your request.", "error");
+                }
+
+            } catch (error) {
+                Swal.fire("Connection Error", "Could not reach the server.", "error");
+            }
+
+            btn.disabled = false;
+            btn.innerHTML = "Send";
         });
-
-        const data = await res.json();
-        alert(data.message || "Sent successfully!");
-    });
     </script>
-
-<script>
-if ("serviceWorker" in navigator) {
-    navigator.serviceWorker.register("/service-worker.js")
-    .then(() => console.log("Service Worker registrado 👍"))
-    .catch(err => console.log("Error registrando SW:", err));
-}
-</script>
 
 </body>
 </html>
