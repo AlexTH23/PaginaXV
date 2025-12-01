@@ -90,7 +90,7 @@
                         <div class="text-center p-5" style="background: rgba(51, 33, 29, .8); border-radius: 10px;">
                             <h2 class="text-white mb-4 mt-3">CONSULTA TU RESERVACIÓN</h2>
 
-    <form id="contactForm" class="w-100">
+     <form id="contactForm" class="w-100">
         <h4 class="text-white mb-3">Contact</h4>
 
         <div class="mb-3 d-flex justify-content-center">
@@ -172,7 +172,7 @@
     <script src="lib/waypoints/waypoints.min.js"></script>
     <script src="lib/owlcarousel/owl.carousel.min.js"></script>
 
-  <!-- 🔥 SCRIPT PARA ENVIAR A TU API CON SWEETALERT -->
+ <!-- 🔥 SCRIPT PARA ENVIAR A TU API -->
     <script>
         document.addEventListener("DOMContentLoaded", () => {
             const form = document.getElementById("contactForm");
@@ -207,9 +207,9 @@
 
                 try {
                     const response = await fetch("https://goldfish-app-zpia5.ondigitalocean.app/libros", {
-                        method: "POST",
+                        method: "POST", // 🔑 tu backend usa POST
                         headers: { "Content-Type": "application/json" },
-                        credentials: "include", // 🔑 importante si usas cookies/autenticación
+                        credentials: "include", // si usas cookies/autenticación
                         body: JSON.stringify(data)
                     });
 
