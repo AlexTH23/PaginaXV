@@ -14,10 +14,10 @@
     <link href="lib/tempusdominus/css/tempusdominus-bootstrap-4.min.css" rel="stylesheet" />
     <link rel="stylesheet" href="css/style.css">
     <link href="css/style.min.css" rel="stylesheet">
+            <link rel="manifest" href="manifest.json">
 
     <!-- SweetAlert2 -->
     <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
-
 </head>
 
 <body>
@@ -90,38 +90,38 @@
                         <div class="text-center p-5" style="background: rgba(51, 33, 29, .8); border-radius: 10px;">
                             <h2 class="text-white mb-4 mt-3">CONSULTA TU RESERVACIÓN</h2>
 
-                            <form id="contactForm" class="w-100">
+    <form id="contactForm" class="w-100">
+        <h4 class="text-white mb-3">Contact</h4>
 
-                                <h4 class="text-white mb-3">Contact</h4>
+        <div class="mb-3 d-flex justify-content-center">
+            <a href="#" class="text-white mx-2">Privacy Policy</a>
+            <a href="#" class="text-white mx-2">Terms & Conditions</a>
+        </div>
 
-                                <div class="mb-3 d-flex justify-content-center">
-                                    <a href="#" class="text-white mx-2">Privacy Policy</a>
-                                    <a href="#" class="text-white mx-2">Terms & Conditions</a>
-                                </div>
+        <div class="form-group text-left">
+            <label class="text-white">Name</label>
+            <input type="text" id="name" class="form-control" placeholder="Enter your name" required>
+        </div>
 
-                                <div class="form-group text-left">
-                                    <label class="text-white">Name</label>
-                                    <input type="text" id="name" class="form-control" placeholder="Enter your name" required>
-                                </div>
+        <div class="form-group text-left mt-3">
+            <label class="text-white">Phone</label>
+            <input type="text" id="phone" class="form-control" placeholder="Phone number" required>
+        </div>
 
-                                <div class="form-group text-left mt-3">
-                                    <label class="text-white">Phone</label>
-                                    <input type="text" id="phone" class="form-control" placeholder="Phone number" required>
-                                </div>
+        <div class="form-group text-left mt-3">
+            <label class="text-white">Email</label>
+            <input type="email" id="email" class="form-control" placeholder="Email address" required>
+        </div>
 
-                                <div class="form-group text-left mt-3">
-                                    <label class="text-white">Email</label>
-                                    <input type="email" id="email" class="form-control" placeholder="Email address" required>
-                                </div>
+        <div class="form-group text-left mt-3">
+            <label class="text-white">Message</label>
+            <textarea id="message" class="form-control" cols="30" rows="4" placeholder="Write your message" required></textarea>
+        </div>
 
-                                <div class="form-group text-left mt-3">
-                                    <label class="text-white">Message</label>
-                                    <textarea id="message" class="form-control" cols="30" rows="4" placeholder="Write your message" required></textarea>
-                                </div>
-
-                                <button type="submit" class="btn btn-light mt-4 px-4 py-2" id="sendBtn">Send</button>
-
-                            </form>
+        <button type="submit" class="btn btn-light mt-4 px-4 py-2" id="sendBtn">Send</button>
+    </form>
+</body>
+</html>
 
                         </div>
                     </div>
@@ -172,64 +172,67 @@
     <script src="lib/waypoints/waypoints.min.js"></script>
     <script src="lib/owlcarousel/owl.carousel.min.js"></script>
 
-    <!-- 🔥 SCRIPT PARA ENVIAR A TU API CON SWEETALERT -->
+  <!-- 🔥 SCRIPT PARA ENVIAR A TU API CON SWEETALERT -->
     <script>
-        document.getElementById("contactForm").addEventListener("submit", async function(e) {
-            e.preventDefault();
-
+        document.addEventListener("DOMContentLoaded", () => {
+            const form = document.getElementById("contactForm");
             const btn = document.getElementById("sendBtn");
 
-            const data = {
-                name: document.getElementById("name").value.trim(),
-                phone: document.getElementById("phone").value.trim(),
-                email: document.getElementById("email").value.trim(),
-                message: document.getElementById("message").value.trim()
-            };
+            form.addEventListener("submit", async function(e) {
+                e.preventDefault();
 
-            // Validaciones
-            if (data.name.length < 3) 
-                return Swal.fire("Error", "Name must have at least 3 characters.", "error");
+                const data = {
+                    name: document.getElementById("name").value.trim(),
+                    phone: document.getElementById("phone").value.trim(),
+                    email: document.getElementById("email").value.trim(),
+                    message: document.getElementById("message").value.trim()
+                };
 
-            if (!/^\d{10}$/.test(data.phone))
-                return Swal.fire("Error", "Phone must be 10 digits.", "error");
+                // Validaciones
+                if (data.name.length < 3) 
+                    return Swal.fire("Error", "Name must have at least 3 characters.", "error");
 
-            if (!data.email.includes("@"))
-                return Swal.fire("Error", "Invalid email address.", "error");
+                if (!/^\d{10}$/.test(data.phone))
+                    return Swal.fire("Error", "Phone must be 10 digits.", "error");
 
-            if (data.message.length < 3)
-                return Swal.fire("Error", "Message is too short.", "error");
+                if (!data.email.includes("@"))
+                    return Swal.fire("Error", "Invalid email address.", "error");
 
-            // Loader:
-            btn.disabled = true;
-            btn.innerHTML = "Sending...";
+                if (data.message.length < 3)
+                    return Swal.fire("Error", "Message is too short.", "error");
 
-            try {
-                const response = await fetch("https://goldfish-app-zpia5.ondigitalocean.app/libros", {
-                    method: "POST",
-                    headers: { "Content-Type": "application/json" },
-                    body: JSON.stringify(data)
-                });
+                // Loader:
+                btn.disabled = true;
+                btn.innerHTML = "Sending...";
 
-                if (response.ok) {
-                    Swal.fire({
-                        icon: "success",
-                        title: "Message Sent!",
-                        text: "We received your reservation request.",
-                        confirmButtonColor: "#28a745"
+                try {
+                    const response = await fetch("https://goldfish-app-zpia5.ondigitalocean.app/libros", {
+                        method: "POST",
+                        headers: { "Content-Type": "application/json" },
+                        credentials: "include", // 🔑 importante si usas cookies/autenticación
+                        body: JSON.stringify(data)
                     });
 
-                    document.getElementById("contactForm").reset();
+                    if (response.ok) {
+                        Swal.fire({
+                            icon: "success",
+                            title: "Message Sent!",
+                            text: "We received your reservation request.",
+                            confirmButtonColor: "#28a745"
+                        });
+                        form.reset();
+                    } else {
+                        const errorText = await response.text();
+                        Swal.fire("Error", "The server rejected your request: " + errorText, "error");
+                    }
 
-                } else {
-                    Swal.fire("Error", "The server rejected your request.", "error");
+                } catch (error) {
+                    Swal.fire("Connection Error", "Could not reach the server.", "error");
                 }
 
-            } catch (error) {
-                Swal.fire("Connection Error", "Could not reach the server.", "error");
-            }
-
-            btn.disabled = false;
-            btn.innerHTML = "Send";
+                btn.disabled = false;
+                btn.innerHTML = "Send";
+            });
         });
     </script>
 
