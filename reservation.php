@@ -34,7 +34,6 @@
     <!-- Navbar Start -->
     <div class="container-fluid p-0 nav-bar">
         <nav class="navbar navbar-expand-lg bg-none navbar-dark py-3">
-            <!-- 🔹 Aquí va tu imagen como icono -->
             <a href="index.php" class="navbar-brand d-flex align-items-center px-lg-4 m-0">
                 <img src="img/Icono.png" 
                      alt="Logo" 
@@ -101,7 +100,8 @@
                         <div class="text-center p-5" style="background: rgba(51, 33, 29, .8); border-radius: 10px;">
                             <h2 class="text-white mb-4 mt-3">CONSULTA TU RESERVACIÓN</h2>
 
-                            <form action="https://formsubmit.co/angelicaseegio26@gmail.com" method="POST" class="w-100">
+                            <!-- 🔹 Se elimina formsubmit y se deja id para JS -->
+                            <form id="reservationForm" class="w-100">
 
                                 <h4 class="text-white mb-3">Contact</h4>
 
@@ -131,10 +131,6 @@
                                 </div>
 
                                 <button type="submit" class="btn btn-light mt-4 px-4 py-2">Send</button>
-
-                                <input type="hidden" name="_next" value="http://127.0.0.1:5500/CORREO_FORMULARIO/www/index.php">
-                                <input type="hidden" name="_captcha" value="false">
-
                             </form>
                         </div>
                     </div>
@@ -190,12 +186,32 @@
     <script src="lib/tempusdominus/js/moment-timezone.min.js"></script>
     <script src="lib/tempusdominus/js/tempusdominus-bootstrap-4.min.js"></script>
 
-    <!-- Contact Javascript File -->
-    <script src="mail/jqBootstrapValidation.min.js"></script>
-    <script src="mail/contact.js"></script>
-
     <!-- Template Javascript -->
     <script src="js/main.js"></script>
+
+    <!-- 🔹 JS para enviar JSON a submit.php -->
+    <script>
+    document.getElementById("reservationForm").addEventListener("submit", async function(e) {
+        e.preventDefault();
+
+        const formData = {
+            name: this.name.value,
+            phone: this.phone.value,
+            email: this.email.value,
+            message: this.message.value
+        };
+
+        const res = await fetch("submit.php", {
+            method: "POST",
+            headers: { "Content-Type": "application/json" },
+            body: JSON.stringify(formData)
+        });
+
+        const data = await res.json();
+        alert(data.message || "Sent successfully!");
+    });
+    </script>
+
 <script>
 if ("serviceWorker" in navigator) {
     navigator.serviceWorker.register("/service-worker.js")
@@ -203,6 +219,6 @@ if ("serviceWorker" in navigator) {
     .catch(err => console.log("Error registrando SW:", err));
 }
 </script>
-</body>
 
+</body>
 </html>
