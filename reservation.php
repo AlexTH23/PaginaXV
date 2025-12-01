@@ -34,13 +34,12 @@
     <!-- Navbar Start -->
     <div class="container-fluid p-0 nav-bar">
         <nav class="navbar navbar-expand-lg bg-none navbar-dark py-3">
-            <a href="index.html" class="navbar-brand px-lg-4 m-0"></a>
             <!-- 🔹 Aquí va tu imagen como icono -->
-        <a href="index.html" class="navbar-brand d-flex align-items-center px-lg-4 m-0">
-            <img src="img/Icono.png" 
-                 alt="Logo" 
-                 style="width:40px; height:40px; object-fit:contain; margin-right:8px;">
-        </a>
+            <a href="index.php" class="navbar-brand d-flex align-items-center px-lg-4 m-0">
+                <img src="img/Icono.png" 
+                     alt="Logo" 
+                     style="width:40px; height:40px; object-fit:contain; margin-right:8px;">
+            </a>
 
             <button type="button" class="navbar-toggler" data-toggle="collapse" data-target="#navbarCollapse">
                 <span class="navbar-toggler-icon"></span>
@@ -48,19 +47,19 @@
 
             <div class="collapse navbar-collapse justify-content-between" id="navbarCollapse">
                 <div class="navbar-nav ml-auto p-4">
-                    <a href="index.html" class="nav-item nav-link">Home</a>
-                    <a href="about.html" class="nav-item nav-link">About Me</a>
-                    <a href="service.html" class="nav-item nav-link">Services</a>
-                    <a href="menu.html" class="nav-item nav-link">Images of my Work</a>
+                    <a href="index.php" class="nav-item nav-link">Home</a>
+                    <a href="about.php" class="nav-item nav-link">About Me</a>
+                    <a href="service.php" class="nav-item nav-link">Services</a>
+                    <a href="menu.php" class="nav-item nav-link">Images of my Work</a>
 
                     <div class="nav-item dropdown">
                         <a href="#" class="nav-link dropdown-toggle active" data-toggle="dropdown">Information</a>
                         <div class="dropdown-menu text-capitalize">
-                            <a href="reservation.html" class="dropdown-item active">Reservation</a>
-                            <a href="testimonial.html" class="dropdown-item">Testimonial</a>
+                            <a href="reservation.php" class="dropdown-item active">Reservation</a>
+                            <a href="testimonial.php" class="dropdown-item">Testimonial</a>
                         </div>
                     </div>
-                    <a href="contact.html" class="nav-item nav-link">Contact</a>
+                    <a href="contact.php" class="nav-item nav-link">Contact</a>
                 </div>
             </div>
         </nav>
@@ -73,7 +72,7 @@
         <div class="d-flex flex-column align-items-center justify-content-center pt-0 pt-lg-5" style="min-height: 400px">
             <h1 class="display-4 mb-3 mt-0 mt-lg-5 text-white text-uppercase">Reservation</h1>
             <div class="d-inline-flex mb-lg-5">
-                <p class="m-0 text-white"><a class="text-white" href="">Home</a></p>
+                <p class="m-0 text-white"><a class="text-white" href="index.php">Home</a></p>
                 <p class="m-0 text-white px-2">/</p>
                 <p class="m-0 text-white">Reservation</p>
             </div>
@@ -102,42 +101,41 @@
                         <div class="text-center p-5" style="background: rgba(51, 33, 29, .8); border-radius: 10px;">
                             <h2 class="text-white mb-4 mt-3">CONSULTA TU RESERVACIÓN</h2>
 
-<form action="https://formsubmit.co/angelicaseegio26@gmail.com" method="POST" class="w-100">
+                            <form action="https://formsubmit.co/angelicaseegio26@gmail.com" method="POST" class="w-100">
 
-    <h4 class="text-white mb-3">Contact</h4>
+                                <h4 class="text-white mb-3">Contact</h4>
 
-    <div class="mb-3 d-flex justify-content-center">
-        <a href="#" class="text-white mx-2">Privacy Policy</a>
-        <a href="#" class="text-white mx-2">Terms & Conditions</a>
-    </div>
+                                <div class="mb-3 d-flex justify-content-center">
+                                    <a href="#" class="text-white mx-2">Privacy Policy</a>
+                                    <a href="#" class="text-white mx-2">Terms & Conditions</a>
+                                </div>
 
-    <div class="form-group text-left">
-        <label class="text-white">Name</label>
-        <input type="text" name="name" class="form-control" placeholder="Enter your name" required>
-    </div>
+                                <div class="form-group text-left">
+                                    <label class="text-white">Name</label>
+                                    <input type="text" name="name" class="form-control" placeholder="Enter your name" required>
+                                </div>
 
-    <div class="form-group text-left mt-3">
-        <label class="text-white">Phone</label>
-        <input type="text" name="phone" class="form-control" placeholder="Phone number" required>
-    </div>
+                                <div class="form-group text-left mt-3">
+                                    <label class="text-white">Phone</label>
+                                    <input type="text" name="phone" class="form-control" placeholder="Phone number" required>
+                                </div>
 
-    <div class="form-group text-left mt-3">
-        <label class="text-white">Email</label>
-        <input type="email" name="email" class="form-control" placeholder="Email address" required>
-    </div>
+                                <div class="form-group text-left mt-3">
+                                    <label class="text-white">Email</label>
+                                    <input type="email" name="email" class="form-control" placeholder="Email address" required>
+                                </div>
 
-    <div class="form-group text-left mt-3">
-        <label class="text-white">Message</label>
-        <textarea name="message" class="form-control" cols="30" rows="4" placeholder="Write your message"></textarea>
-    </div>
+                                <div class="form-group text-left mt-3">
+                                    <label class="text-white">Message</label>
+                                    <textarea name="message" class="form-control" cols="30" rows="4" placeholder="Write your message"></textarea>
+                                </div>
 
-    <button type="submit" class="btn btn-light mt-4 px-4 py-2">Send</button>
+                                <button type="submit" class="btn btn-light mt-4 px-4 py-2">Send</button>
 
-    <input type="hidden" name="_next" value="http://127.0.0.1:5500/CORREO_FORMULARIO/www/index.html">
-    <input type="hidden" name="_captcha" value="false">
+                                <input type="hidden" name="_next" value="http://127.0.0.1:5500/CORREO_FORMULARIO/www/index.php">
+                                <input type="hidden" name="_captcha" value="false">
 
-</form>
-
+                            </form>
                         </div>
                     </div>
 

@@ -3,7 +3,7 @@
 
 <head>
     <meta charset="utf-8">
-    <title>About - Miriams´S Coreography</title>
+    <title>Images of my Work - Miriams´S Coreography</title>
     <link rel="icon" href="img/IconoVentana.ico" type="image/x-icon">
     <meta content="width=device-width, initial-scale=1.0" name="viewport">
     <meta content="Free Website Template" name="keywords">
@@ -25,39 +25,83 @@
 
     <!-- Customized Bootstrap Stylesheet -->
     <link href="css/style.min.css" rel="stylesheet">
-        <link rel="manifest" href="manifest.json">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="manifest" href="manifest.json">
+    
+    <style>
+        /* Ajuste SOLO para imágenes baile */
+        .image-container{
+            display: flex;
+            justify-content: center;
+            gap: 20px;
+            flex-wrap: wrap;
+        }
+        .image-container div{
+            width: 30%;
+            min-width: 250px;
+            overflow: hidden;
+            border-radius: 12px;
+        }
+        .image-container img{
+            width: 100%;
+            height: 280px;
+            object-fit: cover; /* evita deformación y recorta para verse limpia */
+            border-radius: 12px;
+            transition: 0.4s ease;
+        }
+        .image-container img:hover{
+            transform: scale(1.05);
+        }
+
+        /* 📱 Responsive para móvil */
+        @media (max-width: 768px){
+            .image-container div{
+                width: 45%;
+            }
+            .image-container img{
+                height: 220px;
+            }
+        }
+        @media (max-width: 500px){
+            .image-container div{
+                width: 100%;
+            }
+            .image-container img{
+                height: 200px;
+            }
+        }
+    </style>
+
 </head>
 
 <body>
     <!-- Navbar Start -->
     <div class="container-fluid p-0 nav-bar">
         <nav class="navbar navbar-expand-lg bg-none navbar-dark py-3">
-            <a href="index.html" class="navbar-brand px-lg-4 m-0">
-            </a>
             <!-- 🔹 Aquí va tu imagen como icono -->
-        <a href="index.html" class="navbar-brand d-flex align-items-center px-lg-4 m-0">
-            <img src="img/Icono.png" 
-                 alt="Logo" 
-                 style="width:40px; height:40px; object-fit:contain; margin-right:8px;">
-        </a>
+            <a href="index.php" class="navbar-brand d-flex align-items-center px-lg-4 m-0">
+                <img src="img/Icono.png" 
+                     alt="Logo" 
+                     style="width:40px; height:40px; object-fit:contain; margin-right:8px;">
+            </a>
 
             <button type="button" class="navbar-toggler" data-toggle="collapse" data-target="#navbarCollapse">
                 <span class="navbar-toggler-icon"></span>
             </button>
             <div class="collapse navbar-collapse justify-content-between" id="navbarCollapse">
                 <div class="navbar-nav ml-auto p-4">
-                    <a href="index.html" class="nav-item nav-link">Home</a>
-                    <a href="about.html" class="nav-item nav-link active">About Me</a>
-                    <a href="service.html" class="nav-item nav-link">Services</a>
-                    <a href="menu.html" class="nav-item nav-link">Images of my Work</a>
+                    <a href="index.php" class="nav-item nav-link">Home</a>
+                    <a href="about.php" class="nav-item nav-link">About Me</a>
+                    <a href="service.php" class="nav-item nav-link">Services</a>
+                    <a href="menu.php" class="nav-item nav-link active">Images of my Work</a>
                     <div class="nav-item dropdown">
                         <a href="#" class="nav-link dropdown-toggle" data-toggle="dropdown">Information</a>
                         <div class="dropdown-menu text-capitalize">
-                            <a href="reservation.html" class="dropdown-item">Reservation</a>
-                            <a href="testimonial.html" class="dropdown-item">Testimonial</a>
+                            <a href="reservation.php" class="dropdown-item">Reservation</a>
+                            <a href="testimonial.php" class="dropdown-item">Testimonial</a>
                         </div>
                     </div>
-                    <a href="contact.html" class="nav-item nav-link">Contact</a>
+                    <a href="contact.php" class="nav-item nav-link">Contact</a>
                 </div>
             </div>
         </nav>
@@ -68,54 +112,45 @@
     <!-- Page Header Start -->
     <div class="container-fluid page-header mb-5 position-relative overlay-bottom">
         <div class="d-flex flex-column align-items-center justify-content-center pt-0 pt-lg-5" style="min-height: 400px">
-            <h1 class="display-4 mb-3 mt-0 mt-lg-5 text-white text-uppercase">About Me</h1>
+            <h1 class="display-4 mb-3 mt-0 mt-lg-5 text-white text-uppercase">IMAGES</h1>
             <div class="d-inline-flex mb-lg-5">
-                <p class="m-0 text-white"><a class="text-white" href="">Home</a></p>
+                <p class="m-0 text-white"><a class="text-white" href="index.php">Home</a></p>
                 <p class="m-0 text-white px-2">/</p>
-                <p class="m-0 text-white">About Me</p>
+                <p class="m-0 text-white">Images of my Work</p>
             </div>
         </div>
     </div>
     <!-- Page Header End -->
 
 
-    <!-- About Start -->
-    <div class="container-fluid py-5">
+    <!-- Menu Start -->
+    <div class="container-fluid pt-5">
         <div class="container">
             <div class="section-title">
-                <h1 class="text-primary text-uppercase" style="letter-spacing: 5px;">About Me</h1>
+                <h1 class="text-primary text-uppercase" style="letter-spacing: 5px;">IMAGES OF MY WORK</h1>
+                <h1 class="display-4">_________________________________________</h1>
+                <h4 class="display-4">CONOCE MI AMBIENTE DE TRABAJO</h4>
             </div>
-            <div class="row">
-                <div class="col-lg-4 py-0 py-lg-5">
-                    <h5 class="mb-3 text-center text-warning">Hello! My name is Miriam and i reside in Los Angeles.</h5>
-                    <p class="text-justify">
-                        My passion strated when i was in high school when i joined a dance team. Family and friends reached 
-                        out to me to help them with their dances for their "QUINCIAÑERAS" and that is how this journey began. 
-                        when they saw how passionate i was about creating something unique and making rehearsals fun, friends 
-                        of quinciañeras i taught and friends of family contacted me to do theirs also. This went on for many 
-                        years being contacted by many people across the San Fernando valley. Now, I have over 10 years of 
-                        experience creating beautiful dances of different kinds for quinciañerasand sweet 16 events.
-                    </p>
-                </div>
-                <div class="col-lg-4 py-5 py-lg-0" style="min-height: 500px;">
-                    <div class="position-relative h-100">
-                        <img class="position-absolute w-100 h-100" src="img/aboutme.jpeg" style="object-fit: cover;">
-                    </div>
-                </div>
-                <div class="col-lg-4 py-0 py-lg-5">
-                    <br><br>
-                    <h5 class="mb-3 text-warning text-center">GOALS</h5>
-                <p class="text-justify">
-                    My goal when working whit quinciañeras and sweet 16's is to make fun and memorable experiences  for all 
-                    who participate in the dances i choreograph.
-                    <br><br> To create a special dances where the start of the show feels 
-                    confident and beauutiful on their special day
-                </p>
-                </div>
-            </div>
+            <div class="image-container">
+                <div><img src="img/baile1.jpeg" alt="Imagen 1"></div>
+                <div><img src="img/baile2.jpeg" alt="Imagen 2"></div>
+                <div><img src="img/baile3.jpg" alt="Imagen 3"></div>
+              </div>
+              <br><br>
+              <div class="image-container">
+                <div><img src="img/baile4.jpg" alt="Imagen 1"></div>
+                <div><img src="img/baile5.jpeg" alt="Imagen 2"></div>
+                <div><img src="img/baile6.jpeg" alt="Imagen 3"></div>
+              </div>
+              <br><br>
+              <div class="image-container">
+                <div><img src="img/baile7.jpg" alt="Imagen 1"></div>
+                <div><img src="img/baile8.jpg" alt="Imagen 2"></div>
+                <div><img src="img/baile9.jpg" alt="Imagen 3"></div>
+              </div>
         </div>
     </div>
-    <!-- About End -->
+    <!-- Menu End -->
 
 
     <!-- Footer Start -->

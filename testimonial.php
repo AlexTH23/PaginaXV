@@ -9,48 +9,53 @@
     <meta content="Free Website Template" name="keywords">
     <meta content="Free Website Template" name="description">
 
+    <!-- Favicon -->
+    <link href="img/favicon.ico" rel="icon">
+
+    <!-- Google Font -->
     <link rel="preconnect" href="https://fonts.gstatic.com">
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@200;400&family=Roboto:wght@400;500;700&display=swap" rel="stylesheet"> 
 
+    <!-- Font Awesome -->
     <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.10.0/css/all.min.css" rel="stylesheet">
 
+    <!-- Libraries Stylesheet -->
     <link href="lib/owlcarousel/assets/owl.carousel.min.css" rel="stylesheet">
     <link href="lib/tempusdominus/css/tempusdominus-bootstrap-4.min.css" rel="stylesheet" />
 
+    <!-- Customized Bootstrap Stylesheet -->
     <link href="css/style.min.css" rel="stylesheet">
-        <link rel="manifest" href="manifest.json">
+    <link rel="manifest" href="manifest.json">
 </head>
 
 <body>
     <!-- Navbar Start -->
     <div class="container-fluid p-0 nav-bar">
         <nav class="navbar navbar-expand-lg bg-none navbar-dark py-3">
-            <a href="index.html" class="navbar-brand px-lg-4 m-0">
-            </a>
             <!-- 🔹 Aquí va tu imagen como icono -->
-        <a href="index.html" class="navbar-brand d-flex align-items-center px-lg-4 m-0">
-            <img src="img/Icono.png" 
-                 alt="Logo" 
-                 style="width:40px; height:40px; object-fit:contain; margin-right:8px;">
-        </a>
+            <a href="index.php" class="navbar-brand d-flex align-items-center px-lg-4 m-0">
+                <img src="img/Icono.png" 
+                     alt="Logo" 
+                     style="width:40px; height:40px; object-fit:contain; margin-right:8px;">
+            </a>
 
             <button type="button" class="navbar-toggler" data-toggle="collapse" data-target="#navbarCollapse">
                 <span class="navbar-toggler-icon"></span>
             </button>
             <div class="collapse navbar-collapse justify-content-between" id="navbarCollapse">
                 <div class="navbar-nav ml-auto p-4">
-                    <a href="index.html" class="nav-item nav-link">Home</a>
-                    <a href="about.html" class="nav-item nav-link">About Me</a>
-                    <a href="service.html" class="nav-item nav-link">Services</a>
-                    <a href="menu.html" class="nav-item nav-link">Images of my Work</a>
+                    <a href="index.php" class="nav-item nav-link">Home</a>
+                    <a href="about.php" class="nav-item nav-link">About Me</a>
+                    <a href="service.php" class="nav-item nav-link">Services</a>
+                    <a href="menu.php" class="nav-item nav-link">Images of my Work</a>
                     <div class="nav-item dropdown">
                         <a href="#" class="nav-link dropdown-toggle active" data-toggle="dropdown">Information</a>
                         <div class="dropdown-menu text-capitalize">
-                            <a href="reservation.html" class="dropdown-item">Reservation</a>
-                            <a href="testimonial.html" class="dropdown-item active">Testimonial</a>
+                            <a href="reservation.php" class="dropdown-item">Reservation</a>
+                            <a href="testimonial.php" class="dropdown-item active">Testimonial</a>
                         </div>
                     </div>
-                    <a href="contact.html" class="nav-item nav-link">Contact</a>
+                    <a href="contact.php" class="nav-item nav-link">Contact</a>
                 </div>
             </div>
         </nav>
@@ -63,7 +68,7 @@
         <div class="d-flex flex-column align-items-center justify-content-center pt-0 pt-lg-5" style="min-height: 400px">
             <h1 class="display-4 mb-3 mt-0 mt-lg-5 text-white text-uppercase">Testimonial</h1>
             <div class="d-inline-flex mb-lg-5">
-                <p class="m-0 text-white"><a class="text-white" href="">Home</a></p>
+                <p class="m-0 text-white"><a class="text-white" href="index.php">Home</a></p>
                 <p class="m-0 text-white px-2">/</p>
                 <p class="m-0 text-white">Testimonial</p>
             </div>
@@ -146,7 +151,7 @@
             <button type="submit" class="btn btn-light px-4 py-2">Enviar</button>
           </div>
 
-          <input type="hidden" name="_next" value="http://127.0.0.1:5500/index.html">
+          <input type="hidden" name="_next" value="http://127.0.0.1:5500/index.php">
           <input type="hidden" name="_captcha" value="false">
         </form>
       </div>

@@ -26,7 +26,8 @@
     <!-- Customized Bootstrap Stylesheet -->
     <link href="css/style.min.css" rel="stylesheet">
     <link rel="stylesheet" href="css/style.css">
-        <link rel="manifest" href="manifest.json">
+    <link rel="manifest" href="manifest.json">
+
     <style>
         .cafe-claro {
             color: hsl(25, 51%, 42%);
@@ -118,32 +119,30 @@
     <!-- Navbar Start -->
     <div class="container-fluid p-0 nav-bar">
         <nav class="navbar navbar-expand-lg bg-none navbar-dark py-3">
-            <a href="index.html" class="navbar-brand px-lg-4 m-0">
-            </a>
             <!-- 🔹 Aquí va tu imagen como icono -->
-        <a href="index.html" class="navbar-brand d-flex align-items-center px-lg-4 m-0">
-            <img src="img/Icono.png" 
-                 alt="Logo" 
-                 style="width:40px; height:40px; object-fit:contain; margin-right:8px;">
-        </a>
+            <a href="index.php" class="navbar-brand d-flex align-items-center px-lg-4 m-0">
+                <img src="img/Icono.png" 
+                     alt="Logo" 
+                     style="width:40px; height:40px; object-fit:contain; margin-right:8px;">
+            </a>
 
             <button type="button" class="navbar-toggler" data-toggle="collapse" data-target="#navbarCollapse">
                 <span class="navbar-toggler-icon"></span>
             </button>
             <div class="collapse navbar-collapse justify-content-between" id="navbarCollapse">
                 <div class="navbar-nav ml-auto p-4">
-                    <a href="index.html" class="nav-item nav-link active">Home</a>
-                    <a href="about.html" class="nav-item nav-link">About Me</a>
-                    <a href="service.html" class="nav-item nav-link">Services</a>
-                    <a href="menu.html" class="nav-item nav-link">Images of my Work</a>
+                    <a href="index.php" class="nav-item nav-link active">Home</a>
+                    <a href="about.php" class="nav-item nav-link">About Me</a>
+                    <a href="service.php" class="nav-item nav-link">Services</a>
+                    <a href="menu.php" class="nav-item nav-link">Images of my Work</a>
                     <div class="nav-item dropdown">
                         <a href="#" class="nav-link dropdown-toggle" data-toggle="dropdown">Information</a>
                         <div class="dropdown-menu text-capitalize">
-                            <a href="reservation.html" class="dropdown-item">Reservation</a>
-                            <a href="testimonial.html" class="dropdown-item">Testimonial</a>
+                            <a href="reservation.php" class="dropdown-item">Reservation</a>
+                            <a href="testimonial.php" class="dropdown-item">Testimonial</a>
                         </div>
                     </div>
-                    <a href="contact.html" class="nav-item nav-link">Contact</a>
+                    <a href="contact.php" class="nav-item nav-link">Contact</a>
                 </div>
             </div>
         </nav>
@@ -241,36 +240,31 @@
                                   </button> 
                             </center>
                             
-
-
- <!-- ///////////////// INICIO DE LA PRIMER EMERGENTE /////////////// -->
- <div class="modal fade" id="miVentanaEmergente1" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
-    <div class="modal-dialog">
-        <div class="modal-content">
-            <div class="modal-header">
-                <h5 class="modal-title text-black text-center" id="exampleModalLabel">VIDEO OF BAILE SORPRESA</h5>
-                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-            </div>
-            <div class="modal-body">
-                <p class="text-black text-center"> DAME UNA DESCRIPCION PARA AQUI
-                    <center>
-                        <video width="480" height="270" controls>
-                            <source src="img/sorpresa.mp4" type="video/mp4">
-                          </video>
-                    </center>
-                </p>
-            </div>
-            <div class="modal-footer">
-                <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cerrar</button>
-                <!-- Puedes agregar más botones si es necesario -->
-            </div>
-        </div>
-    </div>
-</div>
-  <!-- ////////////////// FIN PRIMERA EMERGENTE ////////////// -->
-
-
-
+                            <!-- ///////////////// INICIO DE LA PRIMER EMERGENTE /////////////// -->
+                            <div class="modal fade" id="miVentanaEmergente1" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                                <div class="modal-dialog">
+                                    <div class="modal-content">
+                                        <div class="modal-header">
+                                            <h5 class="modal-title text-black text-center" id="exampleModalLabel">VIDEO OF BAILE SORPRESA</h5>
+                                            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                                        </div>
+                                        <div class="modal-body">
+                                            <p class="text-black text-center"> DAME UNA DESCRIPCION PARA AQUI
+                                                <center>
+                                                    <video width="480" height="270" controls>
+                                                        <source src="img/sorpresa.mp4" type="video/mp4">
+                                                    </video>
+                                                </center>
+                                            </p>
+                                        </div>
+                                        <div class="modal-footer">
+                                            <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cerrar</button>
+                                            <!-- Puedes agregar más botones si es necesario -->
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <!-- ////////////////// FIN PRIMERA EMERGENTE ////////////// -->
                         </div>
                     </div>
                 </div>
@@ -288,36 +282,31 @@
                                   </button> 
                             </center>
 
-
- <!-- //////////////// INICIO SEGUNDA EMERGENTE //////////////// -->
- <div class="modal fade" id="miVentanaEmergente2" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
-    <div class="modal-dialog">
-        <div class="modal-content">
-            <div class="modal-header">
-                <h5 class="modal-title text-black text-center" id="exampleModalLabel">VIDEO OF BAILE SORPRESA</h5>
-                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-            </div>
-            <div class="modal-body">
-                <p class="text-black text-center"> DAME UNA DESCRIPCION PARA AQUI o video
-                    <center>
-                        <video width="480" height="270" controls>
-                            <source src="img/sorpresa.mp4" type="video/mp4">
-                          </video>
-                    </center>
-                </p>
-            </div>
-            <div class="modal-footer">
-                <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cerrar</button>
-                <!-- Puedes agregar más botones si es necesario -->
-            </div>
-        </div>
-    </div>
-</div>
-  <!-- ////////////////// FIN DE SEGUNDA EMERGENTE///////// -->
-
-
-
-
+                            <!-- //////////////// INICIO SEGUNDA EMERGENTE //////////////// -->
+                            <div class="modal fade" id="miVentanaEmergente2" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                                <div class="modal-dialog">
+                                    <div class="modal-content">
+                                        <div class="modal-header">
+                                            <h5 class="modal-title text-black text-center" id="exampleModalLabel">VIDEO OF BAILE SORPRESA</h5>
+                                            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                                        </div>
+                                        <div class="modal-body">
+                                            <p class="text-black text-center"> DAME UNA DESCRIPCION PARA AQUI o video
+                                                <center>
+                                                    <video width="480" height="270" controls>
+                                                        <source src="img/sorpresa.mp4" type="video/mp4">
+                                                    </video>
+                                                </center>
+                                            </p>
+                                        </div>
+                                        <div class="modal-footer">
+                                            <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cerrar</button>
+                                            <!-- Puedes agregar más botones si es necesario -->
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <!-- ////////////////// FIN DE SEGUNDA EMERGENTE///////// -->
                         </div>
                     </div>
                 </div>
@@ -335,36 +324,31 @@
                               </button> 
                             </center>
                             
-
-
- <!-- /////////////////// TERCRE EMERGENTE INICIO ////////////// -->
- <div class="modal fade" id="miVentanaEmergente3" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
-    <div class="modal-dialog">
-        <div class="modal-content">
-            <div class="modal-header">
-                <h5 class="modal-title text-black text-center" id="exampleModalLabel">VIDEO OF BAILE SORPRESA</h5>
-                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-            </div>
-            <div class="modal-body">
-                <p class="text-black text-center"> DAME UNA DESCRIPCION PARA AQUI o video
-                    <center>
-                        <video width="480" height="270" controls>
-                            <source src="img/sorpresa.mp4" type="video/mp4">
-                          </video>
-                    </center>
-                </p>
-            </div>
-            <div class="modal-footer">
-                <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cerrar</button>
-                <!-- Puedes agregar más botones si es necesario -->
-            </div>
-        </div>
-    </div>
-</div>
-  <!-- /////////////////// FIN TERCERA EMERGENTE ///////////// -->
-
-
-
+                            <!-- /////////////////// TERCRE EMERGENTE INICIO ////////////// -->
+                            <div class="modal fade" id="miVentanaEmergente3" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                                <div class="modal-dialog">
+                                    <div class="modal-content">
+                                        <div class="modal-header">
+                                            <h5 class="modal-title text-black text-center" id="exampleModalLabel">VIDEO OF BAILE SORPRESA</h5>
+                                            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                                        </div>
+                                        <div class="modal-body">
+                                            <p class="text-black text-center"> DAME UNA DESCRIPCION PARA AQUI o video
+                                                <center>
+                                                    <video width="480" height="270" controls>
+                                                        <source src="img/sorpresa.mp4" type="video/mp4">
+                                                    </video>
+                                                </center>
+                                            </p>
+                                        </div>
+                                        <div class="modal-footer">
+                                            <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cerrar</button>
+                                            <!-- Puedes agregar más botones si es necesario -->
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <!-- /////////////////// FIN TERCERA EMERGENTE ///////////// -->
                         </div>
                     </div>
                 </div>
@@ -383,36 +367,31 @@
                               </button> 
                             </center>
                            
-
-
- <!-- ////////////////// INICIO CUARTA EMERGENTE /////////// -->
- <div class="modal fade" id="miVentanaEmergente4" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
-    <div class="modal-dialog">
-        <div class="modal-content">
-            <div class="modal-header">
-                <h5 class="modal-title text-black text-center" id="exampleModalLabel">VIDEO OF BAILE SORPRESA</h5>
-                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-            </div>
-            <div class="modal-body">
-                <p class="text-black text-center"> DAME UNA DESCRIPCION PARA AQUI o video o musica algo
-                    <center>
-                        <video width="480" height="270" controls>
-                            <source src="img/sorpresa.mp4" type="video/mp4">
-                          </video>
-                    </center>
-                </p>
-            </div>
-            <div class="modal-footer">
-                <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cerrar</button>
-                <!-- Puedes agregar más botones si es necesario -->
-            </div>
-        </div>
-    </div>
-</div>
-  <!-- ///////////////// FIN CUARTA EMERGENTE /////////// -->
-
-
-
+                            <!-- ////////////////// INICIO CUARTA EMERGENTE /////////// -->
+                            <div class="modal fade" id="miVentanaEmergente4" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                                <div class="modal-dialog">
+                                    <div class="modal-content">
+                                        <div class="modal-header">
+                                            <h5 class="modal-title text-black text-center" id="exampleModalLabel">VIDEO OF BAILE SORPRESA</h5>
+                                            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                                        </div>
+                                        <div class="modal-body">
+                                            <p class="text-black text-center"> DAME UNA DESCRIPCION PARA AQUI o video o musica algo
+                                                <center>
+                                                    <video width="480" height="270" controls>
+                                                        <source src="img/sorpresa.mp4" type="video/mp4">
+                                                    </video>
+                                                </center>
+                                            </p>
+                                        </div>
+                                        <div class="modal-footer">
+                                            <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cerrar</button>
+                                            <!-- Puedes agregar más botones si es necesario -->
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <!-- ///////////////// FIN CUARTA EMERGENTE /////////// -->
                         </div>
                     </div>
                 </div>
@@ -430,41 +409,34 @@
                               </button> 
                             </center>
                            
-
-
- <!-- ////////////////// INICIO quinta EMERGENTE /////////// -->
- <div class="modal fade" id="miVentanaEmergente5" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
-    <div class="modal-dialog">
-        <div class="modal-content">
-            <div class="modal-header">
-                <h5 class="modal-title text-black text-center" id="exampleModalLabel">VIDEO OF BAILE SORPRESA</h5>
-                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-            </div>
-            <div class="modal-body">
-                <p class="text-black text-center"> DAME UNA DESCRIPCION PARA AQUI o video o musica algo de lo que quieras
-                    <center>
-                        <video width="480" height="270" controls>
-                            <source src="img/sorpresa.mp4" type="video/mp4">
-                          </video>
-                    </center>
-                </p>
-            </div>
-            <div class="modal-footer">
-                <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cerrar</button>
-                <!-- Puedes agregar más botones si es necesario -->
-            </div>
-        </div>
-    </div>
-</div>
-  <!-- ///////////////// FIN quinta EMERGENTE /////////// -->
-
-
-
+                            <!-- ////////////////// INICIO quinta EMERGENTE /////////// -->
+                            <div class="modal fade" id="miVentanaEmergente5" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                                <div class="modal-dialog">
+                                    <div class="modal-content">
+                                        <div class="modal-header">
+                                            <h5 class="modal-title text-black text-center" id="exampleModalLabel">VIDEO OF BAILE SORPRESA</h5>
+                                            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                                        </div>
+                                        <div class="modal-body">
+                                            <p class="text-black text-center"> DAME UNA DESCRIPCION PARA AQUI o video o musica algo de lo que quieras
+                                                <center>
+                                                    <video width="480" height="270" controls>
+                                                        <source src="img/sorpresa.mp4" type="video/mp4">
+                                                    </video>
+                                                </center>
+                                            </p>
+                                        </div>
+                                        <div class="modal-footer">
+                                            <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cerrar</button>
+                                            <!-- Puedes agregar más botones si es necesario -->
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <!-- ///////////////// FIN quinta EMERGENTE /////////// -->
                         </div>
                     </div>
                 </div>
-
-
 
                 <div class="col-lg-6 mb-5">
                     <div class="row align-items-center">
@@ -480,43 +452,34 @@
                               </button> 
                             </center>
                            
-
-
- <!-- ////////////////// INICIO sexta EMERGENTE /////////// -->
- <div class="modal fade" id="miVentanaEmergente6" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
-    <div class="modal-dialog">
-        <div class="modal-content">
-            <div class="modal-header">
-                <h5 class="modal-title text-black text-center" id="exampleModalLabel">VIDEO OF BAILE SORPRESA</h5>
-                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-            </div>
-            <div class="modal-body">
-                <p class="text-black text-center"> DAME UNA DESCRIPCION PARA AQUI o video o musica algo igual lo que puedas 
-                    <center>
-                        <video width="480" height="270" controls>
-                            <source src="img/sorpresa.mp4" type="video/mp4">
-                          </video>
-                    </center>
-                </p>
-            </div>
-            <div class="modal-footer">
-                <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cerrar</button>
-                <!-- Puedes agregar más botones si es necesario -->
-            </div>
-        </div>
-    </div>
-</div>
-  <!-- ///////////////// FIN sexta EMERGENTE /////////// -->
-
-
-
+                            <!-- ////////////////// INICIO sexta EMERGENTE /////////// -->
+                            <div class="modal fade" id="miVentanaEmergente6" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                                <div class="modal-dialog">
+                                    <div class="modal-content">
+                                        <div class="modal-header">
+                                            <h5 class="modal-title text-black text-center" id="exampleModalLabel">VIDEO OF BAILE SORPRESA</h5>
+                                            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                                        </div>
+                                        <div class="modal-body">
+                                            <p class="text-black text-center"> DAME UNA DESCRIPCION PARA AQUI o video o musica algo igual lo que puedas 
+                                                <center>
+                                                    <video width="480" height="270" controls>
+                                                        <source src="img/sorpresa.mp4" type="video/mp4">
+                                                    </video>
+                                                </center>
+                                            </p>
+                                        </div>
+                                        <div class="modal-footer">
+                                            <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cerrar</button>
+                                            <!-- Puedes agregar más botones si es necesario -->
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <!-- ///////////////// FIN sexta EMERGENTE /////////// -->
                         </div>
                     </div>
                 </div>
-
-
-
-
             </div>
         </div>
     </div>
@@ -576,7 +539,7 @@
     <!-- Menu End -->
 
 
- <!-- Reservation Start -->
+    <!-- Reservation Start -->
     <div class="container-fluid py-5">
         <div class="container">
             <div class="reservation position-relative overlay-top overlay-bottom">
@@ -591,42 +554,40 @@
                         </div>
                     </div>
 
-<form action="https://formsubmit.co/angelicaseegio26@gmail.com" method="POST" class="w-100">
+                    <div class="col-lg-6">
+                        <form action="https://formsubmit.co/angelicaseegio26@gmail.com" method="POST" class="w-100">
+                            <h4 class="text-white mb-3">Contact</h4>
 
-    <h4 class="text-white mb-3">Contact</h4>
+                            <div class="mb-3 d-flex justify-content-center">
+                                <a href="#" class="text-white mx-2">Privacy Policy</a>
+                                <a href="#" class="text-white mx-2">Terms & Conditions</a>
+                            </div>
 
-    <div class="mb-3 d-flex justify-content-center">
-        <a href="#" class="text-white mx-2">Privacy Policy</a>
-        <a href="#" class="text-white mx-2">Terms & Conditions</a>
-    </div>
+                            <div class="form-group text-left">
+                                <label class="text-white">Name</label>
+                                <input type="text" name="name" class="form-control" placeholder="Enter your name" required>
+                            </div>
 
-    <div class="form-group text-left">
-        <label class="text-white">Name</label>
-        <input type="text" name="name" class="form-control" placeholder="Enter your name" required>
-    </div>
+                            <div class="form-group text-left mt-3">
+                                <label class="text-white">Phone</label>
+                                <input type="text" name="phone" class="form-control" placeholder="Phone number" required>
+                            </div>
 
-    <div class="form-group text-left mt-3">
-        <label class="text-white">Phone</label>
-        <input type="text" name="phone" class="form-control" placeholder="Phone number" required>
-    </div>
+                            <div class="form-group text-left mt-3">
+                                <label class="text-white">Email</label>
+                                <input type="email" name="email" class="form-control" placeholder="Email address" required>
+                            </div>
 
-    <div class="form-group text-left mt-3">
-        <label class="text-white">Email</label>
-        <input type="email" name="email" class="form-control" placeholder="Email address" required>
-    </div>
+                            <div class="form-group text-left mt-3">
+                                <label class="text-white">Message</label>
+                                <textarea name="message" class="form-control" cols="30" rows="4" placeholder="Write your message"></textarea>
+                            </div>
 
-    <div class="form-group text-left mt-3">
-        <label class="text-white">Message</label>
-        <textarea name="message" class="form-control" cols="30" rows="4" placeholder="Write your message"></textarea>
-    </div>
+                            <button type="submit" class="btn btn-light mt-4 px-4 py-2">Send</button>
 
-    <button type="submit" class="btn btn-light mt-4 px-4 py-2">Send</button>
-
-    <input type="hidden" name="_next" value="http://127.0.0.1:5500/CORREO_FORMULARIO/www/index.html">
-    <input type="hidden" name="_captcha" value="false">
-
-</form>
-                        </div>
+                            <input type="hidden" name="_next" value="http://127.0.0.1:5500/CORREO_FORMULARIO/www/index.php">
+                            <input type="hidden" name="_captcha" value="false">
+                        </form>
                     </div>
 
                 </div>
@@ -704,7 +665,6 @@
                     <a class="btn btn-lg btn-outline-light btn-lg-square" href="#"><i class="fab fa-instagram"></i></a>
                 </div>
             </div>
-        
         </div>
         <div class="container-fluid text-center text-white border-top mt-4 py-4 px-sm-3 px-md-5" style="border-color: rgba(256, 256, 256, .1) !important;">
             <p class="mb-2 text-white">Copyright &copy; <a class="font-weight-bold" href="#">Domain</a>. All Rights Reserved.</a></p>
