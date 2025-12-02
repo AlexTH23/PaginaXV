@@ -29,7 +29,7 @@ $payload = [
 $apiURL = "https://goldfish-app-zpia5.ondigitalocean.app/libros";
 
 $ch = curl_init($apiURL);
-curl_setopt($ch, CURLOPT_CUSTOMREQUEST, "PUT"); // 🔑 si decides usar PUT en lugar de POST
+curl_setopt($ch, CURLOPT_CUSTOMREQUEST, "POST"); // Cambiado a POST
 curl_setopt($ch, CURLOPT_POSTFIELDS, json_encode($payload));
 curl_setopt($ch, CURLOPT_HTTPHEADER, [
     "Content-Type: application/json"

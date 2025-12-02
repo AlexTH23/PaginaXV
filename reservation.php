@@ -90,36 +90,31 @@
                         <div class="text-center p-5" style="background: rgba(51, 33, 29, .8); border-radius: 10px;">
                             <h2 class="text-white mb-4 mt-3">CONSULTA TU RESERVACIÓN</h2>
 
-     <form id="contactForm" class="w-100">
-        <h4 class="text-white mb-3">Contact</h4>
+        
+        <form id="contactForm">
+            <div class="mb-3">
+                <label for="name" class="form-label">Name</label>
+                <input type="text" class="form-control" id="name" placeholder="Enter your name" required>
+            </div>
 
-        <div class="mb-3 d-flex justify-content-center">
-            <a href="#" class="text-white mx-2">Privacy Policy</a>
-            <a href="#" class="text-white mx-2">Terms & Conditions</a>
-        </div>
+            <div class="mb-3">
+                <label for="phone" class="form-label">Phone</label>
+                <input type="text" class="form-control" id="phone" placeholder="Phone number" required>
+            </div>
 
-        <div class="form-group text-left">
-            <label class="text-white">Name</label>
-            <input type="text" id="name" class="form-control" placeholder="Enter your name" required>
-        </div>
+            <div class="mb-3">
+                <label for="email" class="form-label">Email</label>
+                <input type="email" class="form-control" id="email" placeholder="Email address" required>
+            </div>
 
-        <div class="form-group text-left mt-3">
-            <label class="text-white">Phone</label>
-            <input type="text" id="phone" class="form-control" placeholder="Phone number" required>
-        </div>
+            <div class="mb-3">
+                <label for="message" class="form-label">Message</label>
+                <textarea class="form-control" id="message" rows="4" placeholder="Write your message" required></textarea>
+            </div>
 
-        <div class="form-group text-left mt-3">
-            <label class="text-white">Email</label>
-            <input type="email" id="email" class="form-control" placeholder="Email address" required>
-        </div>
+            <button type="submit" class="btn btn-primary btn-submit" id="sendBtn">Send</button>
+        </form>
 
-        <div class="form-group text-left mt-3">
-            <label class="text-white">Message</label>
-            <textarea id="message" class="form-control" cols="30" rows="4" placeholder="Write your message" required></textarea>
-        </div>
-
-        <button type="submit" class="btn btn-light mt-4 px-4 py-2" id="sendBtn">Send</button>
-    </form>
 </body>
 </html>
 
@@ -172,67 +167,69 @@
     <script src="lib/waypoints/waypoints.min.js"></script>
     <script src="lib/owlcarousel/owl.carousel.min.js"></script>
 
- <!-- 🔥 SCRIPT PARA ENVIAR A TU API -->
+    <!-- Bootstrap JS Bundle -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"></script>
+
     <script>
-        document.addEventListener("DOMContentLoaded", () => {
-            const form = document.getElementById("contactForm");
-            const btn = document.getElementById("sendBtn");
-
-            form.addEventListener("submit", async function(e) {
-                e.preventDefault();
-
-                const data = {
-                    name: document.getElementById("name").value.trim(),
-                    phone: document.getElementById("phone").value.trim(),
-                    email: document.getElementById("email").value.trim(),
-                    message: document.getElementById("message").value.trim()
-                };
-
-                // Validaciones
-                if (data.name.length < 3) 
-                    return Swal.fire("Error", "Name must have at least 3 characters.", "error");
-
-                if (!/^\d{10}$/.test(data.phone))
-                    return Swal.fire("Error", "Phone must be 10 digits.", "error");
-
-                if (!data.email.includes("@"))
-                    return Swal.fire("Error", "Invalid email address.", "error");
-
-                if (data.message.length < 3)
-                    return Swal.fire("Error", "Message is too short.", "error");
-
-                // Loader:
-                btn.disabled = true;
-                btn.innerHTML = "Sending...";
-
-                try {
-                    const response = await fetch("https://goldfish-app-zpia5.ondigitalocean.app/libros", {
-                        method: "POST", // 🔑 tu backend usa POST
-                        headers: { "Content-Type": "application/json" },
-                        credentials: "include", // si usas cookies/autenticación
-                        body: JSON.stringify(data)
-                    });
-
-                    if (response.ok) {
-                        Swal.fire({
-                            icon: "success",
-                            title: "Message Sent!",
-                            text: "We received your reservation request.",
-                            confirmButtonColor: "#28a745"
-                        });
-                        form.reset();
-                    } else {
-                        const errorText = await response.text();
-                        Swal.fire("Error", "The server rejected your request: " + errorText, "error");
-                    }
-
-                } catch (error) {
-                    Swal.fire("Connection Error", "Could not reach the server.", "error");
+        document.getElementById('contactForm').addEventListener('submit', async function(e) {
+            e.preventDefault(); // Prevenir el envío normal del formulario
+            
+            const sendBtn = document.getElementById('sendBtn');
+            const originalText = sendBtn.textContent;
+            
+            // Mostrar estado de carga
+            sendBtn.textContent = 'Sending...';
+            sendBtn.disabled = true;
+            
+            // Obtener datos del formulario
+            const formData = {
+                name: document.getElementById('name').value,
+                phone: document.getElementById('phone').value,
+                email: document.getElementById('email').value,
+                message: document.getElementById('message').value
+            };
+            
+            try {
+                // Enviar datos a la API
+                const response = await fetch('https://goldfish-app-zpia5.ondigitalocean.app/libros', {
+                    method: 'POST',
+                    headers: {
+                        'Content-Type': 'application/json',
+                    },
+                    body: JSON.stringify(formData)
+                });
+                
+                // Ocultar alertas previas
+                document.getElementById('successAlert').style.display = 'none';
+                document.getElementById('errorAlert').style.display = 'none';
+                
+                if (response.ok) {
+                    // Mostrar éxito
+                    document.getElementById('successAlert').style.display = 'block';
+                    
+                    // Limpiar el formulario
+                    document.getElementById('contactForm').reset();
+                    
+                    // Ocultar alerta después de 5 segundos
+                    setTimeout(() => {
+                        document.getElementById('successAlert').style.display = 'none';
+                    }, 5000);
+                } else {
+                    throw new Error('Error en la respuesta del servidor');
                 }
-
-                btn.disabled = false;
-                btn.innerHTML = "Send";
-            });
+            } catch (error) {
+                console.error('Error:', error);
+                document.getElementById('errorAlert').style.display = 'block';
+                
+                // Ocultar alerta después de 5 segundos
+                setTimeout(() => {
+                    document.getElementById('errorAlert').style.display = 'none';
+                }, 5000);
+            } finally {
+                // Restaurar botón
+                sendBtn.textContent = originalText;
+                sendBtn.disabled = false;
+            }
         });
     </script>
 
