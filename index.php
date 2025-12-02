@@ -539,62 +539,7 @@
     <!-- Menu End -->
 
 
-    <!-- Reservation Start -->
-    <div class="container-fluid py-5">
-        <div class="container">
-            <div class="reservation position-relative overlay-top overlay-bottom">
-                <div class="row align-items-center">
 
-                    <!-- Imagen -->
-                    <div class="col-lg-6 my-5 my-lg-0">
-                        <div class="p-5">
-                            <center>
-                                <img src="img/baile_recervacion.png" alt="" width="230px" height="340px" style="border-radius: 10px;">
-                            </center>
-                        </div>
-                    </div>
-
-                    <div class="col-lg-6">
-                        <form action="https://formsubmit.co/angelicaseegio26@gmail.com" method="POST" class="w-100">
-                            <h4 class="text-white mb-3">Contact</h4>
-
-                            <div class="mb-3 d-flex justify-content-center">
-                                <a href="#" class="text-white mx-2">Privacy Policy</a>
-                                <a href="#" class="text-white mx-2">Terms & Conditions</a>
-                            </div>
-
-                            <div class="form-group text-left">
-                                <label class="text-white">Name</label>
-                                <input type="text" name="name" class="form-control" placeholder="Enter your name" required>
-                            </div>
-
-                            <div class="form-group text-left mt-3">
-                                <label class="text-white">Phone</label>
-                                <input type="text" name="phone" class="form-control" placeholder="Phone number" required>
-                            </div>
-
-                            <div class="form-group text-left mt-3">
-                                <label class="text-white">Email</label>
-                                <input type="email" name="email" class="form-control" placeholder="Email address" required>
-                            </div>
-
-                            <div class="form-group text-left mt-3">
-                                <label class="text-white">Message</label>
-                                <textarea name="message" class="form-control" cols="30" rows="4" placeholder="Write your message"></textarea>
-                            </div>
-
-                            <button type="submit" class="btn btn-light mt-4 px-4 py-2">Send</button>
-
-                            <input type="hidden" name="_next" value="http://127.0.0.1:5500/CORREO_FORMULARIO/www/index.php">
-                            <input type="hidden" name="_captcha" value="false">
-                        </form>
-                    </div>
-
-                </div>
-            </div>
-        </div>
-    </div>
-    <!-- Reservation End -->
 
     <!-- Testimonial Start -->
     <div class="container-fluid py-5">
@@ -608,37 +553,37 @@
                     <div class="d-flex align-items-center mb-3">
                         <img class="img-fluid" src="img/usuario.jpg" alt="">
                         <div class="ml-3">
-                            <h4>NOMBRE DE ALGUIEN</h4>
+                            <h4>- Natalia – Quinceañera</h4>
                         </div>
                     </div>
-                    <p class="m-0">Le puedes decir a alguna señora que te haga una reseña pequeña sobre tu servicio</p>
+                    <p class="m-0">“At first I was very nervous during rehearsals, but Miriam and her team gave me confidence. They taught me step by step, and in the end the choreography turned out spectacular. All my guests were impressed.”</p>
                 </div>
                 <div class="testimonial-item">
                     <div class="d-flex align-items-center mb-3">
                         <img class="img-fluid" src="img/usuario.jpg" alt="">
                         <div class="ml-3">
-                            <h4>NOMBRE DE ALGUIEN</h4>
+                            <h4>Mariana Quinceañera</h4>
                         </div>
                     </div>
-                    <p class="m-0">Le puedes decir a alguna señora que te haga una reseña pequeña sobre tu servicio</p>
+                    <p class="m-0">“The choreography was amazing, it looked like a professional show. The chambelanes did spins and the quinceañera looked happy and confident. You could definitely see the work of a very prepared team.”</p>
                 </div>
                 <div class="testimonial-item">
                     <div class="d-flex align-items-center mb-3">
                         <img class="img-fluid" src="img/usuario.jpg" alt="">
                         <div class="ml-3">
-                            <h4>NOMBRE DE ALGUIEN</h4>
+                            <h4>Rita Martinez</h4>
                         </div>
                     </div>
-                    <p class="m-0">Le puedes decir a alguna señora que te haga una reseña pequeña sobre tu servicio</p>
+                    <p class="m-0">“We hired the complete package with choreography and video. The result was more than just a service—it was memories that move us. From planning to the event, everything was professional and creative.”</p>
                 </div>
                 <div class="testimonial-item">
                     <div class="d-flex align-items-center mb-3">
                         <img class="img-fluid" src="img/usuario.jpg" alt="">
                         <div class="ml-3">
-                            <h4>NOMBRE DE ALGUIEN</h4>
+                            <h4>Griselda a Quinceañera</h4>
                         </div>
                     </div>
-                    <p class="m-0">Le puedes decir a alguna señora que te haga una reseña pequeña sobre tu servicio</p>
+                    <p class="m-0">“We want to thank Miriam and her group for their patience and dedication. Our daughter enjoyed every rehearsal, and the result was an elegant and fun dance. It became an unforgettable memory for the whole family.”</p>
                 </div>
             </div>
         </div>
@@ -700,6 +645,8 @@ if ("serviceWorker" in navigator) {
     .then(() => console.log("Service Worker registrado 👍"))
     .catch(err => console.log("Error registrando SW:", err));
 }
+
+
 </script>
 </body>
 

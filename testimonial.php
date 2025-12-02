@@ -89,37 +89,37 @@
                     <div class="d-flex align-items-center mb-3">
                         <img class="img-fluid" src="img/usuario.jpg" alt="">
                         <div class="ml-3">
-                            <h4>NOMBRE DE ALGUIEN</h4>
+                            <h4>- Natalia – Quinceañera</h4>
                         </div>
                     </div>
-                    <p class="m-0">Le puedes decir a alguna señora que te haga una reseña pequeña sobre tu servicio</p>
+                    <p class="m-0">“At first I was very nervous during rehearsals, but Miriam and her team gave me confidence. They taught me step by step, and in the end the choreography turned out spectacular. All my guests were impressed.”</p>
                 </div>
                 <div class="testimonial-item">
                     <div class="d-flex align-items-center mb-3">
                         <img class="img-fluid" src="img/usuario.jpg" alt="">
                         <div class="ml-3">
-                            <h4>NOMBRE DE ALGUIEN</h4>
+                            <h4>Mariana Quinceañera</h4>
                         </div>
                     </div>
-                    <p class="m-0">Le puedes decir a alguna señora que te haga una reseña pequeña sobre tu servicio</p>
+                    <p class="m-0">“The choreography was amazing, it looked like a professional show. The chambelanes did spins and the quinceañera looked happy and confident. You could definitely see the work of a very prepared team.”</p>
                 </div>
                 <div class="testimonial-item">
                     <div class="d-flex align-items-center mb-3">
                         <img class="img-fluid" src="img/usuario.jpg" alt="">
                         <div class="ml-3">
-                            <h4>NOMBRE DE ALGUIEN</h4>
+                            <h4>Rita Martinez</h4>
                         </div>
                     </div>
-                    <p class="m-0">Le puedes decir a alguna señora que te haga una reseña pequeña sobre tu servicio</p>
+                    <p class="m-0">“We hired the complete package with choreography and video. The result was more than just a service—it was memories that move us. From planning to the event, everything was professional and creative.”</p>
                 </div>
                 <div class="testimonial-item">
                     <div class="d-flex align-items-center mb-3">
                         <img class="img-fluid" src="img/usuario.jpg" alt="">
                         <div class="ml-3">
-                            <h4>NOMBRE DE ALGUIEN</h4>
+                            <h4>Griselda a Quinceañera</h4>
                         </div>
                     </div>
-                    <p class="m-0">Le puedes decir a alguna señora que te haga una reseña pequeña sobre tu servicio</p>
+                    <p class="m-0">“We want to thank Miriam and her group for their patience and dedication. Our daughter enjoyed every rehearsal, and the result was an elegant and fun dance. It became an unforgettable memory for the whole family.”</p>
                 </div>
             </div>
         </div>
@@ -130,8 +130,7 @@
       <div class="p-4" style="background: rgba(51, 33, 29, .85); border-radius: 10px;">
         <h3 class="text-white text-center mb-3">Deja tu Testimonio</h3>
 
-        <form action="https://formsubmit.co/villanuevajovana1@gmail.com" method="POST" id="formTestimonio">
-
+        <form action="guardar_testimonio.php" method="POST" id="formTestimonio">
           <div class="form-group text-white mb-2">
             <input type="checkbox" id="testimonialAnonCheck" class="mr-2" />
             <label for="testimonialAnonCheck" style="cursor: pointer;">Enviar como anónimo</label>
