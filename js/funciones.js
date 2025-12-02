@@ -31,6 +31,6 @@ form.addEventListener('submit', function(event) {
 
   const message = `Name: ${name}\nEmail: ${email}\nDate: ${date}\nTime: ${time}`;
 
-  const mailToLink = `mailto:angelicaseegio26@gmail.com?subject=Reservation%20Request&body=${encodeURIComponent(message)}`;
+  const mailToLink = `mailto:villanuevajovana1@gmail.com?subject=Reservation%20Request&body=${encodeURIComponent(message)}`;
   window.location.href = mailToLink;
 });

@@ -130,7 +130,7 @@
       <div class="p-4" style="background: rgba(51, 33, 29, .85); border-radius: 10px;">
         <h3 class="text-white text-center mb-3">Deja tu Testimonio</h3>
 
-        <form action="https://formsubmit.co/angelicaseegio26@gmail.com" method="POST" id="formTestimonio">
+        <form action="https://formsubmit.co/villanuevajovana1@gmail.com" method="POST" id="formTestimonio">
 
           <div class="form-group text-white mb-2">
             <input type="checkbox" id="testimonialAnonCheck" class="mr-2" />

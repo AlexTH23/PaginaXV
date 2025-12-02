@@ -1,56 +1,37 @@
+
 <?php
-header("Content-Type: application/json; charset=UTF-8");
+use PHPMailer\PHPMailer\PHPMailer;
+use PHPMailer\PHPMailer\Exception;
 
-$input = file_get_contents("php://input");
-$data = json_decode($input, true);
+require 'vendor/autoload.php';
 
-if (
-    !isset($data["name"]) ||
-    !isset($data["phone"]) ||
-    !isset($data["email"]) ||
-    !isset($data["message"])
-) {
-    echo json_encode([
-        "status" => "error",
-        "message" => "Missing required fields."
-    ]);
-    exit;
+if ($_SERVER["REQUEST_METHOD"] == "POST") {
+    $name  = $_POST['name'];
+    $email = $_POST['email'];
+    $date  = $_POST['date'];
+    $time  = $_POST['time'];
+
+    $mail = new PHPMailer(true);
+
+    try {
+        $mail->isSMTP();
+        $mail->Host       = 'smtp.gmail.com';
+        $mail->SMTPAuth   = true;
+        $mail->Username   = 'villanuevajovana1@gmail.com'; // tu correo
+        $mail->Password   = 'Jojovana0101';     // contraseña de aplicación
+        $mail->SMTPSecure = PHPMailer::ENCRYPTION_STARTTLS;
+        $mail->Port       = 587;
+
+        $mail->setFrom('tu_correo@gmail.com', 'Formulario Web');
+        $mail->addAddress('villanuevajovana1@gmail.com', 'Jovana');
+
+        $mail->Subject = 'Reservation Request';
+        $mail->Body    = "Name: $name\nEmail: $email\nDate: $date\nTime: $time";
+
+        $mail->send();
+        echo "✅ Mensaje enviado correctamente.";
+    } catch (Exception $e) {
+        echo "❌ Error: {$mail->ErrorInfo}";
+    }
 }
-
-// Datos que se envían a tu API
-$payload = [
-    "name" => $data["name"],
-    "phone" => $data["phone"],
-    "email" => $data["email"],
-    "message" => $data["message"]
-];
-
-// URL de tu API en DigitalOcean
-$apiURL = "https://goldfish-app-zpia5.ondigitalocean.app/libros";
-
-$ch = curl_init($apiURL);
-curl_setopt($ch, CURLOPT_CUSTOMREQUEST, "POST"); // Cambiado a POST
-curl_setopt($ch, CURLOPT_POSTFIELDS, json_encode($payload));
-curl_setopt($ch, CURLOPT_HTTPHEADER, [
-    "Content-Type: application/json"
-]);
-curl_setopt($ch, CURLOPT_RETURNTRANSFER, true);
-
-$response = curl_exec($ch);
-$httpCode = curl_getinfo($ch, CURLINFO_HTTP_CODE);
-curl_close($ch);
-
-if ($httpCode >= 200 && $httpCode < 300) {
-    echo json_encode([
-        "status" => "success",
-        "message" => "Data sent successfully.",
-        "api_response" => json_decode($response, true)
-    ]);
-} else {
-    echo json_encode([
-        "status" => "error",
-        "message" => "API request failed.",
-        "http_code" => $httpCode,
-        "api_response" => $response
-    ]);
-}
+?>

@@ -91,29 +91,29 @@
                             <h2 class="text-white mb-4 mt-3">CONSULTA TU RESERVACIÓN</h2>
 
         
-        <form id="contactForm">
-            <div class="mb-3">
-                <label for="name" class="form-label">Name</label>
-                <input type="text" class="form-control" id="name" placeholder="Enter your name" required>
-            </div>
+        <form id="contactForm" action="process_reservation.php" method="POST">
+    <div class="mb-3">
+        <label for="name" class="form-label">Name</label>
+        <input type="text" class="form-control" id="name" name="name" placeholder="Enter your name" required>
+    </div>
 
-            <div class="mb-3">
-                <label for="phone" class="form-label">Phone</label>
-                <input type="text" class="form-control" id="phone" placeholder="Phone number" required>
-            </div>
+    <div class="mb-3">
+        <label for="phone" class="form-label">Phone</label>
+        <input type="text" class="form-control" id="phone" name="phone" placeholder="Phone number" required>
+    </div>
 
-            <div class="mb-3">
-                <label for="email" class="form-label">Email</label>
-                <input type="email" class="form-control" id="email" placeholder="Email address" required>
-            </div>
+    <div class="mb-3">
+        <label for="email" class="form-label">Email</label>
+        <input type="email" class="form-control" id="email" name="email" placeholder="Email address" required>
+    </div>
 
-            <div class="mb-3">
-                <label for="message" class="form-label">Message</label>
-                <textarea class="form-control" id="message" rows="4" placeholder="Write your message" required></textarea>
-            </div>
+    <div class="mb-3">
+        <label for="message" class="form-label">Message</label>
+        <textarea class="form-control" id="message" name="message" rows="4" placeholder="Write your message" required></textarea>
+    </div>
 
-            <button type="submit" class="btn btn-primary btn-submit" id="sendBtn">Send</button>
-        </form>
+    <button type="submit" class="btn btn-primary btn-submit" id="sendBtn">Send</button>
+</form>
 
 </body>
 </html>
@@ -166,79 +166,10 @@
     <script src="lib/easing/easing.min.js"></script>
     <script src="lib/waypoints/waypoints.min.js"></script>
     <script src="lib/owlcarousel/owl.carousel.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
 
     <!-- Bootstrap JS Bundle -->
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"></script>
 
-    
-
-    <script>
-        document.getElementById('contactForm').addEventListener('submit', async function(e) {
-            e.preventDefault(); // Prevenir el envío normal del formulario
-            
-            const sendBtn = document.getElementById('sendBtn');
-            const originalText = sendBtn.textContent;
-            
-            // Mostrar estado de carga
-            sendBtn.textContent = 'Sending...';
-            sendBtn.disabled = true;
-            
-            // Obtener datos del formulario
-            const formData = {
-                name: document.getElementById('name').value,
-                phone: document.getElementById('phone').value,
-                email: document.getElementById('email').value,
-                message: document.getElementById('message').value
-            };
-            
-            // Ocultar alertas previas
-            const successAlert = document.getElementById('successAlert');
-            const errorAlert = document.getElementById('errorAlert');
-            successAlert.style.display = 'none';
-            errorAlert.style.display = 'none';
-            
-            try {
-                // Usar un proxy CORS para evitar el error de CORS
-                const proxyUrl = 'https://cors-anywhere.herokuapp.com/';
-                const targetUrl = 'https://goldfish-app-zpia5.ondigitalocean.app/libros';
-                
-                // Enviar datos a la API a través del proxy
-                const response = await fetch(proxyUrl + targetUrl, {
-                    method: 'POST',
-                    headers: {
-                        'Content-Type': 'application/json',
-                    },
-                    body: JSON.stringify(formData)
-                });
-                
-                if (response.ok) {
-                    // Mostrar éxito
-                    successAlert.style.display = 'block';
-                    
-                    // Limpiar el formulario
-                    document.getElementById('contactForm').reset();
-                    
-                    // Ocultar alerta después de 5 segundos
-                    setTimeout(() => {
-                        successAlert.style.display = 'none';
-                    }, 5000);
-                } else {
-                    throw new Error('Error en la respuesta del servidor');
-                }
-            } catch (error) {
-                console.error('Error:', error);
-                errorAlert.style.display = 'block';
-                
-                // Ocultar alerta después de 5 segundos
-                setTimeout(() => {
-                    errorAlert.style.display = 'none';
-                }, 5000);
-            } finally {
-                // Restaurar botón
-                sendBtn.textContent = originalText;
-                sendBtn.disabled = false;
-            }
-        });
-    </script>
 </body>
 </html>
