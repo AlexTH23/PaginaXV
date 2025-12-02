@@ -170,6 +170,8 @@
     <!-- Bootstrap JS Bundle -->
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"></script>
 
+    
+
     <script>
         document.getElementById('contactForm').addEventListener('submit', async function(e) {
             e.preventDefault(); // Prevenir el envío normal del formulario
@@ -189,9 +191,19 @@
                 message: document.getElementById('message').value
             };
             
+            // Ocultar alertas previas
+            const successAlert = document.getElementById('successAlert');
+            const errorAlert = document.getElementById('errorAlert');
+            successAlert.style.display = 'none';
+            errorAlert.style.display = 'none';
+            
             try {
-                // Enviar datos a la API
-                const response = await fetch('https://goldfish-app-zpia5.ondigitalocean.app/libros', {
+                // Usar un proxy CORS para evitar el error de CORS
+                const proxyUrl = 'https://cors-anywhere.herokuapp.com/';
+                const targetUrl = 'https://goldfish-app-zpia5.ondigitalocean.app/libros';
+                
+                // Enviar datos a la API a través del proxy
+                const response = await fetch(proxyUrl + targetUrl, {
                     method: 'POST',
                     headers: {
                         'Content-Type': 'application/json',
@@ -199,31 +211,27 @@
                     body: JSON.stringify(formData)
                 });
                 
-                // Ocultar alertas previas
-                document.getElementById('successAlert').style.display = 'none';
-                document.getElementById('errorAlert').style.display = 'none';
-                
                 if (response.ok) {
                     // Mostrar éxito
-                    document.getElementById('successAlert').style.display = 'block';
+                    successAlert.style.display = 'block';
                     
                     // Limpiar el formulario
                     document.getElementById('contactForm').reset();
                     
                     // Ocultar alerta después de 5 segundos
                     setTimeout(() => {
-                        document.getElementById('successAlert').style.display = 'none';
+                        successAlert.style.display = 'none';
                     }, 5000);
                 } else {
                     throw new Error('Error en la respuesta del servidor');
                 }
             } catch (error) {
                 console.error('Error:', error);
-                document.getElementById('errorAlert').style.display = 'block';
+                errorAlert.style.display = 'block';
                 
                 // Ocultar alerta después de 5 segundos
                 setTimeout(() => {
-                    document.getElementById('errorAlert').style.display = 'none';
+                    errorAlert.style.display = 'none';
                 }, 5000);
             } finally {
                 // Restaurar botón
@@ -232,6 +240,5 @@
             }
         });
     </script>
-
 </body>
 </html>
