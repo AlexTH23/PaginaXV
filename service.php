@@ -103,11 +103,14 @@
                                 Creative and dynamic choreographies designed to surprise your guests with an unforgettable show. Ideal for Sweet 15, birthdays, school events, or special celebrations.
                             </p><br>
 
-                            <center>
-                                <button class="button" data-bs-toggle="modal" data-bs-target="#miVentanaEmergente1">
-                                    <span class="button-content">WATCH VIDEO</span>
-                                </button> 
-                            </center>
+                           <center>
+    <a href="https://youtu.be/_edJqfOb_As?si=0UbqFdJ70ATXJuNi" target="_blank" rel="noopener noreferrer">
+        <button class="button">
+            <span class="button-content">WATCH VIDEO</span>
+        </button>
+    </a>
+</center>
+
 
 <!-- ///////////////// MODAL 1 START /////////////// -->
 <div class="modal fade" id="miVentanaEmergente1" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
@@ -154,16 +157,19 @@
                             <img class="img-fluid mb-3 mb-sm-0" src="img/VALS1.jpeg" alt="">
                         </div>
                         <div class="col-sm-7">
-                            <h4 class="text-warning text-center">WALTZ</h4>
+                            <h4 class="text-warning text-center">VALS</h4>
                             <p class="m-0 text-center">
                                 An elegant, emotional, and carefully choreographed waltz designed to highlight the beauty of the moment. Perfect for Sweet 15, weddings, or any special celebration.
                             </p><br>
 
                             <center>
-                                <button class="button" data-bs-toggle="modal" data-bs-target="#miVentanaEmergente2">
-                                    <span class="button-content">WATCH VIDEO</span>
-                                </button> 
-                            </center>
+    <a href="https://youtu.be/VXFDUcMzzBg?si=CVILmUFMP33kpw1B" target="_blank" rel="noopener noreferrer">
+        <button class="button">
+            <span class="button-content">WATCH VIDEO</span>
+        </button>
+    </a>
+</center>
+
 
 <!-- //////////////// MODAL 2 START //////////////// -->
 <div class="modal fade" id="miVentanaEmergente2" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
@@ -217,10 +223,13 @@
                             </p>
 
                             <center>
-                                <button class="button" data-bs-toggle="modal" data-bs-target="#miVentanaEmergente3">
-                                    <span class="button-content">WATCH VIDEO</span>
-                                </button> 
-                            </center>
+    <a href="https://youtu.be/t-BHDpP5opA?si=b9jhbhKwAb9CHtZJ" target="_blank" rel="noopener noreferrer">
+        <button class="button">
+            <span class="button-content">WATCH VIDEO</span>
+        </button>
+    </a>
+</center>
+
 
 <!-- /////////////////// MODAL 3 START ////////////// -->
 <div class="modal fade" id="miVentanaEmergente3" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
@@ -273,10 +282,12 @@
                             </p>
 
                             <center>
-                                <button class="button" data-bs-toggle="modal" data-bs-target="#miVentanaEmergente4">
-                                    <span class="button-content">WATCH VIDEO</span>
-                                </button> 
-                            </center>
+    <a href="https://youtu.be/lyTmtluV8Zg?si=0HH1_v8qnHlZWlhp" target="_blank" rel="noopener noreferrer">
+        <button class="button">
+            <span class="button-content">WATCH VIDEO</span>
+        </button>
+    </a>
+</center>
 
 
 <!-- ////////////////// MODAL 4 START /////////// -->

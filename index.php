@@ -217,273 +217,383 @@
     <!-- About End -->
 
 
-    <!-- Service Start -->
-    <div class="container-fluid pt-5">
-        <div class="container">
-            <div class="section-title">
-                <h4 class="text-primary text-uppercase" style="letter-spacing: 5px;">SERVICES</h4>
-                <h1 class="display-4">___________________________</h1>
-                <br>
-            </div>
-            <div class="row">
-                <div class="col-lg-6 mb-5">
-                    <div class="row align-items-center">
-                        <div class="col-sm-5">
-                            <img class="img-fluid mb-3 mb-sm-0" src="img/surprize1.jpeg" alt="">
-                        </div>
-                        <div class="col-sm-7">
-                            <h4 class="text-warning text-center">BAILES SORPRESA</h4>
-                            <p class="m-0">A high-energy surprise dance performance filled with fun choreography and unexpected moments. <br> Perfect for entertaining guests and creating a memorable highlight during the celebration.</p>
-                            <center><br>
-                                <button class="button" data-bs-toggle="modal" data-bs-target="#miVentanaEmergente1">
+<!-- Service Start -->
+<div class="container-fluid pt-5">
+    <div class="container">
+        <div class="section-title">
+            <h4 class="text-primary text-uppercase" style="letter-spacing: 5px;">SERVICES</h4>
+            <h1 class="display-4">___________________________</h1>
+            <br>
+        </div>
+
+        <div class="row">
+
+            <!-- ************************************************ -->
+            <!--                  SURPRISE DANCES                 -->
+            <!-- ************************************************ -->
+
+            <div class="col-lg-6 mb-5">
+                <div class="row align-items-center">
+                    <div class="col-sm-5">
+                        <img class="img-fluid mb-3 mb-sm-0" src="img/surprize1.jpeg" alt="">
+                    </div>
+                    <div class="col-sm-7">
+                        <h4 class="text-warning text-center">SURPRISE DANCES</h4>
+                        <p class="m-0">
+                            Creative and dynamic choreographies designed to surprise your guests with an unforgettable show. Ideal for Sweet 15, birthdays, school events, or special celebrations.
+                        </p><br>
+
+                        <center>
+                            <a href="https://youtu.be/_edJqfOb_As?si=0UbqFdJ70ATXJuNi" target="_blank" rel="noopener noreferrer">
+                                <button class="button">
                                     <span class="button-content">WATCH VIDEO</span>
-                                  </button> 
-                            </center>
-                            
-                            <!-- ///////////////// INICIO DE LA PRIMER EMERGENTE /////////////// -->
-                            <div class="modal fade" id="miVentanaEmergente1" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
-                                <div class="modal-dialog">
-                                    <div class="modal-content">
-                                        <div class="modal-header">
-                                            <h5 class="modal-title text-black text-center" id="exampleModalLabel">VIDEO OF BAILE SORPRESA</h5>
-                                            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-                                        </div>
-                                        <div class="modal-body">
-                                            <p class="text-black text-center"> DAME UNA DESCRIPCION PARA AQUI
-                                                <center>
-                                                    <video width="480" height="270" controls>
-                                                        <source src="img/sorpresa.mp4" type="video/mp4">
-                                                    </video>
-                                                </center>
-                                            </p>
-                                        </div>
-                                        <div class="modal-footer">
-                                            <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cerrar</button>
-                                            <!-- Puedes agregar más botones si es necesario -->
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                            <!-- ////////////////// FIN PRIMERA EMERGENTE ////////////// -->
-                        </div>
-                    </div>
-                </div>
-                <div class="col-lg-6 mb-5">
-                    <div class="row align-items-center">
-                        <div class="col-sm-5">
-                            <img class="img-fluid mb-3 mb-sm-0" src="img/VALS1.jpeg" alt="">
-                        </div>
-                        <div class="col-sm-7">
-                            <h4 class="text-warning text-center">VALS</h4>
-                            <p class="m-0 text-center">A classic and elegant waltz that captures the beauty and tradition of the moment.  <br> This performance showcases graceful movement, emotional connection, and timeless style. </p>
-                            <center> <br>
-                                <button class="button" data-bs-toggle="modal" data-bs-target="#miVentanaEmergente2">
-                                    <span class="button-content">WATCH VIDEO</span>
-                                  </button> 
-                            </center>
+                                </button>
+                            </a>
+                        </center>
 
-                            <!-- //////////////// INICIO SEGUNDA EMERGENTE //////////////// -->
-                            <div class="modal fade" id="miVentanaEmergente2" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
-                                <div class="modal-dialog">
-                                    <div class="modal-content">
-                                        <div class="modal-header">
-                                            <h5 class="modal-title text-black text-center" id="exampleModalLabel">VIDEO OF BAILE SORPRESA</h5>
-                                            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-                                        </div>
-                                        <div class="modal-body">
-                                            <p class="text-black text-center"> DAME UNA DESCRIPCION PARA AQUI o video
-                                                <center>
-                                                    <video width="480" height="270" controls>
-                                                        <source src="img/sorpresa.mp4" type="video/mp4">
-                                                    </video>
-                                                </center>
-                                            </p>
-                                        </div>
-                                        <div class="modal-footer">
-                                            <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cerrar</button>
-                                            <!-- Puedes agregar más botones si es necesario -->
-                                        </div>
+                        <!-- MODAL 1 -->
+                        <div class="modal fade" id="miVentanaEmergente1" tabindex="-1" aria-hidden="true">
+                            <div class="modal-dialog">
+                                <div class="modal-content">
+                                    <div class="modal-header">
+                                        <h5 class="modal-title text-black text-center">SURPRISE DANCE VIDEO</h5>
+                                        <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
                                     </div>
-                                </div>
-                            </div>
-                            <!-- ////////////////// FIN DE SEGUNDA EMERGENTE///////// -->
-                        </div>
-                    </div>
-                </div>
-                <div class="col-lg-6 mb-5">
-                    <div class="row align-items-center">
-                        <div class="col-sm-5">
-                            <img class="img-fluid mb-3 mb-sm-0" src="img/papa2.jpg" alt="">
-                        </div>
-                        <div class="col-sm-7">
-                            <h4 class="text-warning text-center">Father/Daughter Surprise Dance</h4>
-                            <p class="m-0 text-center">A heartwarming and fun father-daughter dance that starts traditionally and transforms into an upbeat surprise routine. A perfect blend of emotion, personality, and entertainment for all guests  </p> <br>
-                            <center>
-                                <button class="button" data-bs-toggle="modal" data-bs-target="#miVentanaEmergente3">
-                                <span class="button-content">WATCH VIDEO</span>
-                              </button> 
-                            </center>
-                            
-                            <!-- /////////////////// TERCRE EMERGENTE INICIO ////////////// -->
-                            <div class="modal fade" id="miVentanaEmergente3" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
-                                <div class="modal-dialog">
-                                    <div class="modal-content">
-                                        <div class="modal-header">
-                                            <h5 class="modal-title text-black text-center" id="exampleModalLabel">VIDEO OF BAILE SORPRESA</h5>
-                                            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-                                        </div>
-                                        <div class="modal-body">
-                                            <p class="text-black text-center"> DAME UNA DESCRIPCION PARA AQUI o video
-                                                <center>
-                                                    <video width="480" height="270" controls>
-                                                        <source src="img/sorpresa.mp4" type="video/mp4">
-                                                    </video>
-                                                </center>
-                                            </p>
-                                        </div>
-                                        <div class="modal-footer">
-                                            <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cerrar</button>
-                                            <!-- Puedes agregar más botones si es necesario -->
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                            <!-- /////////////////// FIN TERCERA EMERGENTE ///////////// -->
-                        </div>
-                    </div>
-                </div>
 
-                <div class="col-lg-6 mb-5">
-                    <div class="row align-items-center">
-                        <div class="col-sm-5">
-                            <img class="img-fluid mb-3 mb-sm-0" src="img/dulces16.jpg" alt="">
-                        </div>
-                        <div class="col-sm-7">
-                            <h4 class="text-warning text-center">SWEET 16</h4>
-                            <p class="m-0 text-center">A captivating Sweet 16 presentation featuring expressive choreography and a celebratory vibe. This performance brings emotion, joy, and unforgettable moments to the event.</p> <br>
-                            <center>
-                                 <button class="button" data-bs-toggle="modal" data-bs-target="#miVentanaEmergente4">
-                                <span class="button-content">WATCH VIDEO</span>
-                              </button> 
-                            </center>
-                           
-                            <!-- ////////////////// INICIO CUARTA EMERGENTE /////////// -->
-                            <div class="modal fade" id="miVentanaEmergente4" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
-                                <div class="modal-dialog">
-                                    <div class="modal-content">
-                                        <div class="modal-header">
-                                            <h5 class="modal-title text-black text-center" id="exampleModalLabel">VIDEO OF BAILE SORPRESA</h5>
-                                            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-                                        </div>
-                                        <div class="modal-body">
-                                            <p class="text-black text-center"> DAME UNA DESCRIPCION PARA AQUI o video o musica algo
-                                                <center>
-                                                    <video width="480" height="270" controls>
-                                                        <source src="img/sorpresa.mp4" type="video/mp4">
-                                                    </video>
-                                                </center>
-                                            </p>
-                                        </div>
-                                        <div class="modal-footer">
-                                            <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cerrar</button>
-                                            <!-- Puedes agregar más botones si es necesario -->
-                                        </div>
+                                    <div class="modal-body">
+                                        <p class="text-black text-center">
+                                            This surprise dance blends modern and energetic styles to create a moment full of personality and fun. Perfect to make an impact from the very first second and make the celebrant shine.
+                                        </p><br>
+                                        <center>
+                                            <video width="480" height="270" controls>
+                                                <source src="img/sorpresa.mp4" type="video/mp4">
+                                            </video>
+                                        </center>
                                     </div>
-                                </div>
-                            </div>
-                            <!-- ///////////////// FIN CUARTA EMERGENTE /////////// -->
-                        </div>
-                    </div>
-                </div>
-                <div class="col-lg-6 mb-5">
-                    <div class="row align-items-center">
-                        <div class="col-sm-5">
-                            <img class="img-fluid mb-3 mb-sm-0" src="img/edition.jpg" alt="">
-                        </div>
-                        <div class="col-sm-7">
-                            <h4 class="text-warning text-center">SWEET 16 EDITION</h4>
-                            <p class="m-0 text-center">A cinematic Sweet 16 highlight edit that showcases the celebration through dynamic cuts, emotional moments, and a polished visual style that brings the event to life. </p> <br>
-                            <center>
-                                 <button class="button" data-bs-toggle="modal" data-bs-target="#miVentanaEmergente5">
-                                <span class="button-content">WATCH VIDEO</span>
-                              </button> 
-                            </center>
-                           
-                            <!-- ////////////////// INICIO quinta EMERGENTE /////////// -->
-                            <div class="modal fade" id="miVentanaEmergente5" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
-                                <div class="modal-dialog">
-                                    <div class="modal-content">
-                                        <div class="modal-header">
-                                            <h5 class="modal-title text-black text-center" id="exampleModalLabel">VIDEO OF BAILE SORPRESA</h5>
-                                            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-                                        </div>
-                                        <div class="modal-body">
-                                            <p class="text-black text-center"> DAME UNA DESCRIPCION PARA AQUI o video o musica algo de lo que quieras
-                                                <center>
-                                                    <video width="480" height="270" controls>
-                                                        <source src="img/sorpresa.mp4" type="video/mp4">
-                                                    </video>
-                                                </center>
-                                            </p>
-                                        </div>
-                                        <div class="modal-footer">
-                                            <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cerrar</button>
-                                            <!-- Puedes agregar más botones si es necesario -->
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                            <!-- ///////////////// FIN quinta EMERGENTE /////////// -->
-                        </div>
-                    </div>
-                </div>
 
-                <div class="col-lg-6 mb-5">
-                    <div class="row align-items-center">
-                        <div class="col-sm-5">
-                            <img class="img-fluid mb-3 mb-sm-0" src="img/music.jpg" alt="">
-                        </div>
-                        <div class="col-sm-7">
-                            <h4 class="text-warning text-center">SWEET 16 CHOREOGRAPHY</h4>
-                            <p class="m-0 text-center">A personalized Sweet 16 choreography filled with youthful energy, style, and celebration, featuring creative movement designed to highlight the birthday girl.</p> <br>
-                            <center>
-                                 <button class="button" data-bs-toggle="modal" data-bs-target="#miVentanaEmergente6">
-                                <span class="button-content">WATCH VIDEO</span>
-                              </button> 
-                            </center>
-                           
-                            <!-- ////////////////// INICIO sexta EMERGENTE /////////// -->
-                            <div class="modal fade" id="miVentanaEmergente6" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
-                                <div class="modal-dialog">
-                                    <div class="modal-content">
-                                        <div class="modal-header">
-                                            <h5 class="modal-title text-black text-center" id="exampleModalLabel">VIDEO OF BAILE SORPRESA</h5>
-                                            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-                                        </div>
-                                        <div class="modal-body">
-                                            <p class="text-black text-center"> DAME UNA DESCRIPCION PARA AQUI o video o musica algo igual lo que puedas 
-                                                <center>
-                                                    <video width="480" height="270" controls>
-                                                        <source src="img/sorpresa.mp4" type="video/mp4">
-                                                    </video>
-                                                </center>
-                                            </p>
-                                        </div>
-                                        <div class="modal-footer">
-                                            <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cerrar</button>
-                                            <!-- Puedes agregar más botones si es necesario -->
-                                        </div>
+                                    <div class="modal-footer">
+                                        <button class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
                                     </div>
                                 </div>
                             </div>
-                            <!-- ///////////////// FIN sexta EMERGENTE /////////// -->
                         </div>
+                        <!-- END MODAL 1 -->
                     </div>
                 </div>
             </div>
+
+
+
+
+            <!-- ************************************************ -->
+            <!--                        VALS                      -->
+            <!-- ************************************************ -->
+
+            <div class="col-lg-6 mb-5">
+                <div class="row align-items-center">
+                    <div class="col-sm-5">
+                        <img class="img-fluid mb-3 mb-sm-0" src="img/VALS1.jpeg" alt="">
+                    </div>
+
+                    <div class="col-sm-7">
+                        <h4 class="text-warning text-center">VALS</h4>
+                        <p class="m-0 text-center">
+                            An elegant, emotional, and carefully choreographed waltz designed to highlight the beauty of the moment. Perfect for Sweet 15, weddings, or any special celebration.
+                        </p><br>
+
+                        <center>
+                            <a href="https://youtu.be/VXFDUcMzzBg?si=CVILmUFMP33kpw1B" target="_blank">
+                                <button class="button">
+                                    <span class="button-content">WATCH VIDEO</span>
+                                </button>
+                            </a>
+                        </center>
+
+                        <!-- MODAL 2 -->
+                        <div class="modal fade" id="miVentanaEmergente2" tabindex="-1" aria-hidden="true">
+                            <div class="modal-dialog">
+                                <div class="modal-content">
+                                    <div class="modal-header">
+                                        <h5 class="modal-title text-black text-center">WALTZ VIDEO</h5>
+                                        <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
+                                    </div>
+
+                                    <div class="modal-body">
+                                        <p class="text-black text-center">
+                                            This waltz combines elegance, coordination, and emotional moments designed to create a unique experience. Every step is crafted to look impeccable on stage.
+                                        </p><br>
+
+                                        <center>
+                                            <video width="480" height="270" controls>
+                                                <source src="img/sorpresa.mp4" type="video/mp4">
+                                            </video>
+                                        </center>
+                                    </div>
+
+                                    <div class="modal-footer">
+                                        <button class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- END MODAL 2 -->
+                    </div>
+                </div>
+            </div>
+
+
+
+
+
+            <!-- ************************************************ -->
+            <!--      Father/Daughter Surprise Dance             -->
+            <!-- ************************************************ -->
+
+            <div class="col-lg-6 mb-5">
+                <div class="row align-items-center">
+                    <div class="col-sm-5">
+                        <img class="img-fluid mb-3 mb-sm-0" src="img/papa2.jpg" alt="">
+                    </div>
+
+                    <div class="col-sm-7">
+                        <h4 class="text-warning text-center">Father/Daughter Surprise Dance</h4>
+                        <p class="m-0 text-center">
+                            A unique dance that blends fun, nostalgia, and emotional connection between father and daughter. Perfect for creating a memorable moment during the celebration.
+                        </p><br>
+
+                        <center>
+                            <a href="https://youtu.be/t-BHDpP5opA?si=b9jhbhKwAb9CHtZJ" target="_blank">
+                                <button class="button">
+                                    <span class="button-content">WATCH VIDEO</span>
+                                </button>
+                            </a>
+                        </center>
+
+                        <!-- MODAL 3 -->
+                        <div class="modal fade" id="miVentanaEmergente3" tabindex="-1" aria-hidden="true">
+                            <div class="modal-dialog">
+                                <div class="modal-content">
+
+                                    <div class="modal-header">
+                                        <h5 class="modal-title text-black text-center">VIDEO: Father/Daughter Dance</h5>
+                                        <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
+                                    </div>
+
+                                    <div class="modal-body">
+                                        <p class="text-black text-center">
+                                            A heartwarming performance that begins with a traditional father-daughter moment and transforms into a fun, modern, and unexpected choreography. A perfect balance of emotion and entertainment.
+                                        </p><br>
+
+                                        <center>
+                                            <video width="480" height="270" controls>
+                                                <source src="img/sorpresa.mp4" type="video/mp4">
+                                            </video>
+                                        </center>
+                                    </div>
+
+                                    <div class="modal-footer">
+                                        <button class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                                    </div>
+
+                                </div>
+                            </div>
+                        </div>
+                        <!-- END MODAL 3 -->
+
+                    </div>
+                </div>
+            </div>
+
+
+
+
+            <!-- ************************************************ -->
+            <!--                    SWEET 16                      -->
+            <!-- ************************************************ -->
+
+            <div class="col-lg-6 mb-5">
+                <div class="row align-items-center">
+                    <div class="col-sm-5">
+                        <img class="img-fluid mb-3 mb-sm-0" src="img/dulces16.jpg" alt="">
+                    </div>
+
+                    <div class="col-sm-7">
+                        <h4 class="text-warning text-center">SWEET 16</h4>
+                        <p class="m-0 text-center">
+                            A captivating Sweet 16 presentation featuring expressive choreography and a celebratory vibe. This performance brings emotion, joy, and unforgettable moments to the event.
+                        </p><br>
+
+                        <center>
+                            <a href="https://youtu.be/XwQuI_ZkpFM" target="_blank">
+                                <button class="button">
+                                    <span class="button-content">WATCH VIDEO</span>
+                                </button>
+                            </a>
+                        </center>
+
+                        <!-- MODAL 4 -->
+                        <div class="modal fade" id="miVentanaEmergente4" tabindex="-1" aria-hidden="true">
+                            <div class="modal-dialog">
+                                <div class="modal-content">
+
+                                    <div class="modal-header">
+                                        <h5 class="modal-title text-black text-center">SWEET 16 VIDEO</h5>
+                                        <button class="btn-close" data-bs-dismiss="modal"></button>
+                                    </div>
+
+                                    <div class="modal-body">
+                                        <p class="text-black text-center">
+                                            A beautifully crafted Sweet 16 dance filled with emotion, expressive movement, and celebration. Designed to highlight the birthday girl's personality and create an unforgettable moment.
+                                        </p><br>
+
+                                        <center>
+                                            <video width="480" height="270" controls>
+                                                <source src="img/sorpresa.mp4" type="video/mp4">
+                                            </video>
+                                        </center>
+                                    </div>
+
+                                    <div class="modal-footer">
+                                        <button class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                                    </div>
+
+                                </div>
+                            </div>
+                        </div>
+                        <!-- END MODAL 4 -->
+
+                    </div>
+                </div>
+            </div>
+
+
+
+
+            <!-- ************************************************ -->
+            <!--                SWEET 16 EDITION (VIDEO)         -->
+            <!-- ************************************************ -->
+
+            <div class="col-lg-6 mb-5">
+                <div class="row align-items-center">
+                    <div class="col-sm-5">
+                        <img class="img-fluid mb-3 mb-sm-0" src="img/edition.jpg" alt="">
+                    </div>
+
+                    <div class="col-sm-7">
+                        <h4 class="text-warning text-center">SWEET 16 EDITION</h4>
+                        <p class="m-0 text-center">
+                            A cinematic Sweet 16 highlight edit that showcases the celebration through dynamic cuts, emotional moments, and a polished visual style that brings the event to life.
+                        </p><br>
+
+                        <center>
+                            <a href="https://youtu.be/WWLXvFuH4Rw" target="_blank">
+                                <button class="button">
+                                    <span class="button-content">WATCH VIDEO</span>
+                                </button>
+                            </a>
+                        </center>
+
+                        <!-- MODAL 5 -->
+                        <div class="modal fade" id="miVentanaEmergente5" tabindex="-1" aria-hidden="true">
+                            <div class="modal-dialog">
+                                <div class="modal-content">
+
+                                    <div class="modal-header">
+                                        <h5 class="modal-title text-black">VIDEO EDITION</h5>
+                                        <button class="btn-close" data-bs-dismiss="modal"></button>
+                                    </div>
+
+                                    <div class="modal-body">
+                                        <p class="text-black text-center">
+                                            A visually stunning edit that captures the essence of the Sweet 16 celebration. Dynamic transitions, emotional highlights, and artistic storytelling create a polished and memorable final video.
+                                        </p><br>
+
+                                        <center>
+                                            <video width="480" height="270" controls>
+                                                <source src="img/sorpresa.mp4" type="video/mp4">
+                                            </video>
+                                        </center>
+                                    </div>
+
+                                    <div class="modal-footer">
+                                        <button class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                                    </div>
+
+                                </div>
+                            </div>
+                        </div>
+                        <!-- END MODAL 5 -->
+
+                    </div>
+                </div>
+            </div>
+
+
+
+
+            <!-- ************************************************ -->
+            <!--            SWEET 16 CHOREOGRAPHY                -->
+            <!-- ************************************************ -->
+
+            <div class="col-lg-6 mb-5">
+                <div class="row align-items-center">
+                    <div class="col-sm-5">
+                        <img class="img-fluid mb-3 mb-sm-0" src="img/music.jpg" alt="">
+                    </div>
+
+                    <div class="col-sm-7">
+                        <h4 class="text-warning text-center">SWEET 16 CHOREOGRAPHY</h4>
+                        <p class="m-0 text-center">
+                            A personalized Sweet 16 choreography filled with youthful energy, style, and celebration, featuring creative movement designed to highlight the birthday girl.
+                        </p><br>
+
+                        <center>
+                            <a href="https://youtu.be/dQw4w9WgXcQ" target="_blank">
+                                <button class="button">
+                                    <span class="button-content">WATCH VIDEO</span>
+                                </button>
+                            </a>
+                        </center>
+
+                        <!-- MODAL 6 -->
+                        <div class="modal fade" id="miVentanaEmergente6" tabindex="-1" aria-hidden="true">
+                            <div class="modal-dialog">
+                                <div class="modal-content">
+
+                                    <div class="modal-header">
+                                        <h5 class="modal-title text-black">SWEET 16 CHOREOGRAPHY VIDEO</h5>
+                                        <button class="btn-close" data-bs-dismiss="modal"></button>
+                                    </div>
+
+                                    <div class="modal-body">
+                                        <p class="text-black text-center">
+                                            A vibrant and original Sweet 16 choreography designed to showcase confidence, style, and personality. Modern moves, clean formations, and captivating transitions make this performance unforgettable.
+                                        </p><br>
+
+                                        <center>
+                                            <video width="480" height="270" controls>
+                                                <source src="img/sorpresa.mp4" type="video/mp4">
+                                            </video>
+                                        </center>
+                                    </div>
+
+                                    <div class="modal-footer">
+                                        <button class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                                    </div>
+
+                                </div>
+                            </div>
+                        </div>
+                        <!-- END MODAL 6 -->
+
+                    </div>
+                </div>
+            </div>
+
         </div>
     </div>
-    <!-- Service End -->
+</div>
+<!-- Service End -->
 
 
     <!-- Offer Start -->
